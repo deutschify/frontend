@@ -1,4 +1,8 @@
 import { useRef, useState, useEffect } from "react";
+import axios from "axios";
+import { Test } from "./Test";
+
+const usersUrl = "http://localhost:5000/users";
 
 const Login = () => {
     const userRef = useRef();
@@ -9,6 +13,8 @@ const Login = () => {
     const [errMsg, setErrMsg] = useState("");
     const [success, setSuccess] = useState(false);
 
+    const [users, setUsers] = useState([]);
+
     useEffect(() => {
         userRef.current.focus();
     }, []);
@@ -17,95 +23,84 @@ const Login = () => {
         setErrMsg("");
     }, [user, pwd]);
 
+    useEffect(() => {
+        (async () => {
+            setUsers((await axios.get(usersUrl)).data);
+        })();
+    }, []);
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            const response = await axios.post(
-                LOGIN_URL,
-                JSON.stringify({ user, pwd }),
-                {
-                    headers: { "Content-Type": "application/json" },
-                    withCredentials: true,
-                }
-            );
-            console.log(JSON.stringify(response?.data));
-            //console.log(JSON.stringify(response?.data));
-            const accessToken = response?.data.accessToken;
-            const roles = response?.data?.response?.data.roles;
-            setAuth({ user, pwd, roles, accessToken });
-
-            setUser("");
-            setPwd("");
-            setSuccess(true);
-        } catch (err) {
-            if (!err?.response) {
-                setErrMsg("No Server Response");
-            } else if (err.response?.status === 400) {
-                setErrMsg("missing Username or password");
-            } else if (err.response?.status === 401) {
-                setErrMsg("Unauthorized");
+        users.find((acc) => {
+            if (acc.firstName === user && acc.password === pwd) {
+                setSuccess(true);
+                console.log(user, pwd);
             } else {
-                setErrMsg("login failed");
+                setErrMsg("first name or password doesn't match. Try again!");
             }
-            errRef.current.focus();
-        }
+        });
     };
 
     return (
         <>
             {success ? (
-                <section>
-                    <h1>You are logged in!</h1>
-                    <br />
-                    <p>
-                        <a hrf="#">Go to Home</a>
-                    </p>
-                </section>
+                <Test />
             ) : (
-                <section>
-                    <p
-                        ref={errRef}
-                        className={errMsg ? "errmsg" : "offscreen"}
-                        aria-live="assertive"
-                    >
-                        {errMsg}
-                    </p>
-                    <h1>Sign In</h1>
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="username">Username:</label>
+                <div className="form-container">
+                    <div className="login">
+                        <h3>Sign In</h3>
+                    </div>
+                    <div className="login">
+                        <p
+                            ref={errRef}
+                            className={errMsg ? "errMsg" : "offscreen"}
+                        >
+                            {errMsg}
+                        </p>
+                        <form onSubmit={handleSubmit}>
+                            <div>
+                                <input
+                                    onChange={(e) => setUser(e.target.value)}
+                                    type="text"
+                                    name="firstName"
+                                    autoComplete="on"
+                                    placeholder="First name"
+                                    value={user}
+                                    ref={userRef}
+                                    required
+                                />
+                                <div className="error-notification">
+                                    {/* <p>{errors.firstName?.message}</p> */}
+                                </div>
+                            </div>
 
-                        <input
-                            type="text"
-                            id="username"
-                            ref={userRef}
-                            autoComplete="off"
-                            onChange={(e) => setUser(e.target.value)}
-                            value={user}
-                            required
-                        />
+                            <div>
+                                <input
+                                    onChange={(e) => setPwd(e.target.value)}
+                                    type="password"
+                                    name="password"
+                                    placeholder="Password"
+                                    value={pwd}
+                                    autoComplete="off"
+                                    required
+                                />
+                                <div className="error-notification">
+                                    {/* <p>{errors.password?.message}</p> */}
+                                </div>
+                            </div>
 
-                        <label htmlFor="password">Password:</label>
-
-                        <input
-                            type="password"
-                            id="password"
-                            onChange={(e) => setPwd(e.target.value)}
-                            value={pwd}
-                            required
-                        />
-
-                        <button>Sign In</button>
-                    </form>
-                    <p>
-                        Need an Account?
-                        <br />
-                        <span className="line">
-                            {/*put router link here*/}
-                            <a hrf="#">Sign Up</a>
-                        </span>
-                    </p>
-                </section>
+                            <input type="submit" value="Sign In" />
+                        </form>
+                        <p>
+                            Need an Account? <br />
+                            <span className="line">
+                                {/* Ein Router for Register */}
+                                Ein Router for Register
+                            </span>
+                        </p>
+                    </div>
+                </div>
             )}
         </>
     );
