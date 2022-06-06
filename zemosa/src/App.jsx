@@ -3,9 +3,14 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import { Test } from "./components/Test";
+
+import Search from './components/einbuergerungstest'
+// import Einbuergerungstest from "./components/einbuergerungstest"
+
 import {createContext, useState}from 'react'
 import { Dictionary } from "./components/Dictionary";
 import { ResultList } from './components/ResultList';
+
 import "./App.scss";
 // Create context
 export const InputContext =createContext()
@@ -16,6 +21,11 @@ function App() {
 console.log(inputValue)
     return (
         <div className="App">
+
+            <Search/>
+            {/* <Test /> */}
+            
+
         {/* <Dictionary/>
         <Test/> */}
             <Routes>
@@ -23,6 +33,7 @@ console.log(inputValue)
                 <Route path="/register" element={<Register />} />
                 <Route path="/login/*" element={<Login />} />
             </Routes>
+
         </div>
     );
 }
