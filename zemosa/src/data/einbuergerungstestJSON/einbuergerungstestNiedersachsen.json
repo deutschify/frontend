@@ -1,0 +1,103 @@
+[
+    {
+        "number": "38 381",
+        "category": "Niedersachsen",
+        "question": "Welches Wappen gehört zum Bundesland Niedersachsen?",
+        "answerA": "1",
+        "answerB": "2",
+        "answerC": "3",
+        "answerD": "4",
+        "correctAnswer": "3"
+    },
+    {
+        "number": "382",
+        "category": "Niedersachsen",
+        "question": "Welches ist ein Landkreis in Niedersachsen?",
+        "answerA": "Ammerland",
+        "answerB": "Rhein-Sieg-Kreis",
+        "answerC": "Nordfriesland",
+        "answerD": "Vogtlandkreis",
+        "correctAnswer": "Ammerland"
+    },
+    {
+        "number": "383",
+        "category": "Niedersachsen",
+        "question": "Für wie viele Jahre wird der Landtag in Niedersachsen gewählt?",
+        "answerA": "3",
+        "answerB": "4",
+        "answerC": "5",
+        "answerD": "6",
+        "correctAnswer": "5"
+    },
+    {
+        "number": "384",
+        "category": "Niedersachsen",
+        "question": "Ab welchem Alter darf man in Niedersachsen bei Kommunalwahlen wählen?",
+        "answerA": "14",
+        "answerB": "16",
+        "answerC": "18",
+        "answerD": "20",
+        "correctAnswer": "16"
+    },
+    {
+        "number": "385",
+        "category": "Niedersachsen",
+        "question": "Welche Farben hat die Landesflagge von Niedersachsen?",
+        "answerA": "rot-weiß",
+        "answerB": "schwarz-rot-gold",
+        "answerC": "schwarz-gelb",
+        "answerD": "blau-weiß-rot",
+        "correctAnswer": "schwarz-rot-gold"
+    },
+    {
+        "number": "386",
+        "category": "Niedersachsen",
+        "question": "Wo können Sie sich in Niedersachsen über politische Themen informieren?",
+        "answerA": "beim Koordinator für politische Bildung im Kultusministerium",
+        "answerB": "beim Ordnungsamt der Gemeinde",
+        "answerC": "bei der Verbraucherzentrale",
+        "answerD": "bei den Kirchen",
+        "correctAnswer": "beim Koordinator für politische Bildung im Kultusministerium"
+    },
+    {
+        "number": "387",
+        "category": "Niedersachsen",
+        "question": "Die Landeshauptstadt von Niedersachsen heißt …",
+        "answerA": "Hannover.",
+        "answerB": "Braunschweig.",
+        "answerC": "Wolfsburg.",
+        "answerD": "Osnabrück.",
+        "correctAnswer": "Hannover."
+    },
+    {
+        "number": "388",
+        "category": "Niedersachsen",
+        "question": "Welches Bundesland ist Niedersachsen?",
+        "answerA": "1",
+        "answerB": "2",
+        "answerC": "3",
+        "answerD": "4",
+        "correctAnswer": "1"
+    },
+    {
+        "number": "389",
+        "category": "Niedersachsen",
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Niedersachsen?",
+        "answerA": "Erster Minister / Erste Ministerin",
+        "answerB": "Premierminister / Premierministerin",
+        "answerC": "Bürgermeister / Bürgermeisterin",
+        "answerD": "Ministerpräsident / Ministerpräsidentin",
+        "correctAnswer": "Ministerpräsident / Ministerpräsidentin"
+    },
+    {
+        "number": "390",
+        "category": "Niedersachsen",
+        "question": "Welchen Minister / welche Ministerin hat Niedersachsen nicht?",
+        "answerA": "Justizminister / Justizministerin",
+        "answerB": "Außenminister / Außenministerin",
+        "answerC": "Finanzminister / Finanzministerin",
+        "answerD": "Innenminister / Innenministerin",
+        "correctAnswer": "Außenminister / Außenministerin"
+    }
+
+]
