@@ -11,7 +11,7 @@ export const AppProvider = ({ children }) => {
     const [languages, setLanguages] = useState([]);
     const [defaultLanguage, setDefaultLanguage] = useState("de");
     const [translatedLanguage, setTranslatedLanguage] = useState("en");
-    const [text, setText] = useState("prüfung");
+    const [text, setText] = useState("Ich habe eine prüfung");
     const [translatedText, setTranslatedText] = useState("");
 
     // we are putting the list of languages we get from the API into the state variable of [languages, setLanguages]

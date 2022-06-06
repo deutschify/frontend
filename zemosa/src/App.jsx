@@ -1,3 +1,8 @@
+import { NavLink, Route, Routes } from "react-router-dom";
+// import Login from "./components/Login";
+import { Register } from "./components/Register";
+import { Login } from "./components/Login";
+import { Test } from "./components/Test";
 import {createContext, useState}from 'react'
 import { Dictionary } from "./components/Dictionary";
 import { ResultList } from './components/ResultList';
@@ -10,12 +15,15 @@ function App() {
     const value = { inputValue, setInputValue };
 console.log(inputValue)
     return (
-        <InputContext.Provider value={value}>
-            <div className="App">
-                <Dictionary />
-                <ResultList/>
-            </div>
-        </InputContext.Provider>
+        <div className="App">
+        {/* <Dictionary/>
+        <Test/> */}
+            <Routes>
+                <Route path="*" element={<Register />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/login/*" element={<Login />} />
+            </Routes>
+        </div>
     );
 }
 
