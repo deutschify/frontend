@@ -1,10 +1,12 @@
+import { NavLink, Route, Routes, Navigate } from "react-router-dom";
 import { useRef, useState, useEffect } from "react";
 import axios from "axios";
 import { Test } from "./Test";
+import { Register } from "./Register";
 
 const usersUrl = "http://localhost:5000/users";
 
-const Login = () => {
+export const Login = () => {
     const userRef = useRef();
     const errRef = useRef();
 
@@ -43,66 +45,54 @@ const Login = () => {
     };
 
     return (
-        <>
-            {success ? (
-                <Test />
-            ) : (
-                <div className="form-container">
-                    <div className="login">
-                        <h3>Sign In</h3>
+        <div className="form-container">
+            <div className="login">
+                <h3>Sign In</h3>
+            </div>
+            <div className="login">
+                <p ref={errRef} className={errMsg ? "errMsg" : "offscreen"}>
+                    {errMsg}
+                </p>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <input
+                            onChange={(e) => setUser(e.target.value)}
+                            type="text"
+                            name="firstName"
+                            autoComplete="on"
+                            placeholder="First name"
+                            value={user}
+                            ref={userRef}
+                            required
+                        />
                     </div>
-                    <div className="login">
-                        <p
-                            ref={errRef}
-                            className={errMsg ? "errMsg" : "offscreen"}
-                        >
-                            {errMsg}
-                        </p>
-                        <form onSubmit={handleSubmit}>
-                            <div>
-                                <input
-                                    onChange={(e) => setUser(e.target.value)}
-                                    type="text"
-                                    name="firstName"
-                                    autoComplete="on"
-                                    placeholder="First name"
-                                    value={user}
-                                    ref={userRef}
-                                    required
-                                />
-                                <div className="error-notification">
-                                    {/* <p>{errors.firstName?.message}</p> */}
-                                </div>
-                            </div>
 
-                            <div>
-                                <input
-                                    onChange={(e) => setPwd(e.target.value)}
-                                    type="password"
-                                    name="password"
-                                    placeholder="Password"
-                                    value={pwd}
-                                    autoComplete="off"
-                                    required
-                                />
-                                <div className="error-notification">
-                                    {/* <p>{errors.password?.message}</p> */}
-                                </div>
-                            </div>
-
-                            <input type="submit" value="Sign In" />
-                        </form>
-                        <p>
-                            Need an Account? <br />
-                            <span className="line">
-                                {/* Ein Router for Register */}
-                                Ein Router for Register
-                            </span>
-                        </p>
+                    <div>
+                        <input
+                            onChange={(e) => setPwd(e.target.value)}
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            value={pwd}
+                            autoComplete="off"
+                            required
+                        />
                     </div>
-                </div>
-            )}
-        </>
+
+                    <input type="submit" value="Sign In" />
+                </form>
+                <span>
+                    Need an Account? <br />
+                    <span className="line">
+                        <span className="line">
+                            <NavLink to="/register">Sign Up</NavLink>
+                        </span>
+                        <Routes>
+                            <Route path="/register" element={<Register />} />
+                        </Routes>
+                    </span>
+                </span>
+            </div>
+        </div>
     );
 };
-export default Login;
