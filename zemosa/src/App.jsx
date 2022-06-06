@@ -3,10 +3,17 @@ import { NavLink, Route, Routes } from "react-router-dom";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import { Test } from "./components/Test";
-import { Dictionary } from "./pages/Dictionary";
+import {createContext, useState}from 'react'
+import { Dictionary } from "./components/Dictionary";
+import { ResultList } from './components/ResultList';
 import "./App.scss";
+// Create context
+export const InputContext =createContext()
 
 function App() {
+    const [inputValue, setInputValue] = useState("");
+    const value = { inputValue, setInputValue };
+console.log(inputValue)
     return (
         <div className="App">
         {/* <Dictionary/>
