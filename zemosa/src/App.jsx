@@ -14,8 +14,8 @@ function App() {
     return (
         <div className="App">
             <Search />
-            <ResultList/>
             <Dictionary />
+            <ResultList/>
             <Test />
             <Routes>
                 <Route path="*" element={<Register />} />

@@ -62,6 +62,7 @@ export const AppProvider = ({ children }) => {
                 translatedText,
                 setTranslatedText,
                 translate,
+                value,
                 inputValue, setInputValue
             }}
         >
