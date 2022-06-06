@@ -1,15 +1,21 @@
-// import {NavLink, Route, Routes} from 'react-router-dom';
-// import Login from "./components/Login";
-import {Register} from "./components/Register";
-import { Test } from "./components/Test";
+import {createContext, useState}from 'react'
+import { Dictionary } from "./components/Dictionary";
+import { ResultList } from './components/ResultList';
 import "./App.scss";
+// Create context
+export const InputContext =createContext()
 
 function App() {
+    const [inputValue, setInputValue] = useState("");
+    const value = { inputValue, setInputValue };
+console.log(inputValue)
     return (
-        <div className="App">
-            <Register/>
-            {/* <Test /> */}
-        </div>
+        <InputContext.Provider value={value}>
+            <div className="App">
+                <Dictionary />
+                <ResultList/>
+            </div>
+        </InputContext.Provider>
     );
 }
 
