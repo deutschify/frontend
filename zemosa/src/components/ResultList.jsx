@@ -1,7 +1,8 @@
 import { InputContext } from "../App";
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
-axios.defaults.baseUrl = "https://api.dictionaryapi.dev/api/v2/entries/en";
+axios.defaults.baseURL =
+    "https://api.dictionaryapi.dev/api/v2/entries/en";
 export const ResultList = () => {
     const { inputValue } = useContext(InputContext);
     const [response, setResponse] = useState(null);
@@ -24,14 +25,35 @@ export const ResultList = () => {
         }
     }, [inputValue]);
     console.log(response)
+    if (loading) {
+        return (
+            <div >
+                <div ></div>
+                <div ></div>
+                <div ></div>
+                <div ></div>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <h3 >
+                No Definitions Found 😥
+            </h3>
+        );
+    }
+
 
     return (
         <div className="result-list ">
-            <div className="meaning-difinisions">
-                <h3>Example</h3>
-                <h3>synonym</h3>
-                <h3>Antonym </h3>
-            </div>
+            {response && (
+                <div className="meaning-difinisions">
+                    <h3>Example</h3>
+                    <h3>synonym</h3>
+                    <h3>Antonym </h3>
+                </div>
+            )}
         </div>
     );
 };
