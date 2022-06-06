@@ -1,8 +1,9 @@
 import { useState, useContext } from "react";
-import { InputContext } from "../App";
+import { AppContext } from "../../context/AppContext";
+
 export const Dictionary = () => {
     const [value, setValue] = useState("");
-    const { inputValue, setInputValue } = useContext(InputContext);
+    const { inputValue, setInputValue } = useContext(AppContext);
     const handleInputChange = (e) => setValue(e.target.value);
     const handleSubmit = () => {
         setInputValue(value);

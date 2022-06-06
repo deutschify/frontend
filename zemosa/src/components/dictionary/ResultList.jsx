@@ -1,10 +1,12 @@
-import { InputContext } from "../App";
+import {AppContext} from '../../context/AppContext'
 import axios from "axios";
+import {MeaningList}from './MeaningList';
+import{Example} from './Example';
 import { useEffect, useState, useContext } from "react";
 axios.defaults.baseURL =
     "https://api.dictionaryapi.dev/api/v2/entries/en";
 export const ResultList = () => {
-    const { inputValue } = useContext(InputContext);
+    const { inputValue } = useContext(AppContext);
     const [response, setResponse] = useState(null);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
@@ -48,8 +50,11 @@ export const ResultList = () => {
     return (
         <div className="result-list ">
             {response && (
-                <div className="meaning-difinisions">
+                <div className="meaning-definitions">
+                    <h3>Meaning & Definitions</h3>
+                    <MeaningList mean = {response}/>
                     <h3>Example</h3>
+                    <Example mean = {response}/>
                     <h3>synonym</h3>
                     <h3>Antonym </h3>
                 </div>
