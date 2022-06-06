@@ -4,9 +4,12 @@ import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import { Test } from "./components/Test";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Search from './components/einbuergerungstest'
 // import Einbuergerungstest from "./components/einbuergerungstest"
 =======
+=======
+>>>>>>> refs/remotes/origin/zubi_einbuergerungstest
 
 import Search from './components/einbuergerungstest'
 // import Einbuergerungstest from "./components/einbuergerungstest"
@@ -15,7 +18,10 @@ import {createContext, useState}from 'react'
 import { Dictionary } from "./components/Dictionary";
 import { ResultList } from './components/ResultList';
 
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> refs/remotes/origin/zubi_einbuergerungstest
 import "./App.scss";
 // Create context
 export const InputContext =createContext()
@@ -27,11 +33,14 @@ console.log(inputValue)
     return (
         <div className="App">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Register/>
             <Search/>
             {/* <Test /> */}
             
 =======
+=======
+>>>>>>> refs/remotes/origin/zubi_einbuergerungstest
 
             <Search/>
             {/* <Test /> */}
@@ -45,7 +54,10 @@ console.log(inputValue)
                 <Route path="/login/*" element={<Login />} />
             </Routes>
 
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> refs/remotes/origin/zubi_einbuergerungstest
         </div>
     );
 }
