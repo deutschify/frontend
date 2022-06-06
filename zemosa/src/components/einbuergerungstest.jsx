@@ -1,6 +1,6 @@
 import { useState } from "react";
-import '../style/App.scss';
-import QuestionDE from '../../../../backend/einbuergerungstestJSON'
+
+import QuestionDE from '../data/einbuergerungstestJSON/einbuergerungstestDeutschland'
 
 const Search = () => {
     const [query, setQuery] = useState('');

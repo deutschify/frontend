@@ -1,0 +1,103 @@
+[
+    {
+        "number": "Frage 331",
+        "category": "Brandenburg",
+        "question": "Welches Wappen gehört zum Bundesland Brandenburg?",
+        "answerA": "1",
+        "answerB": "2",
+        "answerC": "3",
+        "answerD": "4",
+        "correctAnswer": "1"
+    },
+    {
+        "number": "Frage 332",
+        "category": "Brandenburg",
+        "question": "Welches ist ein Landkreis in Brandenburg?",
+        "answerA": "Prignitz",
+        "answerB": "Rhein-Sieg-Kreis",
+        "answerC": "Vogtlandkreis",
+        "answerD": "Amberg-Sulzbach",
+        "correctAnswer": "Prignitz"
+    },
+    {
+        "number": "Frage 333",
+        "category": "Brandenburg",
+        "question": "Für wie viele Jahre wird der Landtag in Brandenburg gewählt?",
+        "answerA": "3",
+        "answerB": "4",
+        "answerC": "5",
+        "answerD": "6",
+        "correctAnswer": "5"
+    },
+    {
+        "number": "Frage 334",
+        "category": "Brandenburg",
+        "question": "Ab welchem Alter darf man in Brandenburg bei Kommunalwahlen wählen?",
+        "answerA": "14",
+        "answerB": "18",
+        "answerC": "16",
+        "answerD": "20",
+        "correctAnswer": "16"
+    },
+    {
+        "number": "Frage 335",
+        "category": "Brandenburg",
+        "question": "Welche Farben hat die Landesflagge von Brandenburg?",
+        "answerA": "blau-weiß-rot",
+        "answerB": "rot-weiß",
+        "answerC": "grün-weiß-rot",
+        "answerD": "schwarz-gelb",
+        "correctAnswer": "rot-weiß"
+    },
+    {
+        "number": "Frage 336",
+        "category": "Brandenburg",
+        "question": "Wo können Sie sich in Brandenburg über politische Themen informieren?",
+        "answerA": "bei den Kirchen",
+        "answerB": "beim Ordnungsamt der Gemeinde",
+        "answerC": "bei der Landeszentrale für politische Bildung",
+        "answerD": "bei der Verbraucherzentrale",
+        "correctAnswer": "bei der Landeszentrale für politische Bildung"
+    },
+    {
+        "number": "Frage 337",
+        "category": "Brandenburg",
+        "question": "Die Landeshauptstadt von Brandenburg heißt ...",
+        "answerA": "Potsdam.",
+        "answerB": "Cottbus.",
+        "answerC": "Brandenburg.",
+        "answerD": "Frankfurt/Oder.",
+        "correctAnswer": "Potsdam."
+    },
+    {
+        "number": "Frage 338",
+        "category": "Brandenburg",
+        "question": "Welches Bundesland ist Brandenburg?",
+        "answerA": "1",
+        "answerB": "2",
+        "answerC": "3",
+        "answerD": "4",
+        "correctAnswer": "4"
+    },
+    {
+        "number": "Frage 339",
+        "category": "Brandenburg",
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Brandenburg?",
+        "answerA": "Erster Minister / Erste Ministerin",
+        "answerB": "Premierminister / Premierministerin",
+        "answerC": "Bürgermeister / Bürgermeisterin",
+        "answerD": "Ministerpräsident / Ministerpräsidentin",
+        "correctAnswer": "Ministerpräsident / Ministerpräsidentin"
+    },
+    {
+        "number": "Frage 340",
+        "category": "Brandenburg",
+        "question": "Welchen Minister / welche Ministerin hat Brandenburg nicht?",
+        "answerA": "Justizminister / Justizministerin",
+        "answerB": "Außenminister / Außenministerin",
+        "answerC": "Finanzminister / Finanzministerin",
+        "answerD": "Innenminister / Innenministerin",
+        "correctAnswer": "Außenminister / Außenministerin"
+    }
+    
+]
