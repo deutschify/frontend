@@ -14,6 +14,10 @@ export const AppProvider = ({ children }) => {
     const [text, setText] = useState("Ich habe eine prüfung");
     const [translatedText, setTranslatedText] = useState("");
 
+    // These are for dictionary state variables that
+    const [inputValue, setInputValue] = useState("");
+    const value = { inputValue, setInputValue };
+
     // we are putting the list of languages we get from the API into the state variable of [languages, setLanguages]
     useEffect(() => {
         (async () => {
@@ -58,6 +62,7 @@ export const AppProvider = ({ children }) => {
                 translatedText,
                 setTranslatedText,
                 translate,
+                inputValue, setInputValue
             }}
         >
             {children}
