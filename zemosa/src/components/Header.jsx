@@ -1,25 +1,22 @@
 import React, { useState } from "react";
 import { HamburgerIcon } from "react-hamburger-icon";
-// import { GrLogin } from "react-icons/fa";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { FiLogIn } from "react-icons/fi";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
 import Levels from "./Levels";
 import { Dictionary } from "./dictionary/Dictionary";
-//import { ResultList } from "./dictionary/ResultList";
 
 import AskForHelp from "./AskForHelp";
 import { Books } from "./Books";
 import Search from "./einbuergerungstest";
 import Settings from "./Settings";
-import { Login } from "./Login";
 
 const Header = () => {
     //state for the hamburger icon
     const [open, setOpen] = useState(false);
     //state for the search baseURL
     const [search, setSearch] = useState("");
+
     const headerStyles = {
         backgroundColor: "#ddd",
         color: "red",
@@ -36,16 +33,18 @@ const Header = () => {
         position: "absolute",
         top: "0.5%",
         right: "0.5%",
+        cursor: "pointer"
     };
     const searchBarStyles = {
         position: "absolute",
         top: "-0.3rem",
         left: "48rem",
     };
+
     // to make the fucking logIn Icon clickable, we need to use the navigate
     const navigate = useNavigate();
     const logInHandler = () => {
-        navigate("/register");
+        navigate("/login");
     };
 
     return (
@@ -71,11 +70,11 @@ const Header = () => {
             </div>
 
             {/* <GrLogin style={logInStyles} onClick={logInHandler} /> */}
-            <FontAwesomeIcon
-                icon={faCoffee}
-                style={logInStyles}
-                onClick={logInHandler}
-            ></FontAwesomeIcon>
+
+            <div className="sign-in" style={logInStyles} onClick={logInHandler}>
+                <span>Log In</span>
+                <FiLogIn />
+            </div>
 
             <HamburgerIcon
                 style={burgerStyles}
@@ -90,48 +89,50 @@ const Header = () => {
                         width: "300px",
                         backgroundColor: "#ddd",
                         marginLeft: "5px",
-                        zIndex: "99",
+                        position: "absolute"
                     }}
                 >
-                    <ul>
-                        <li style={{ marginBottom: "10px" }}>
-                            <NavLink to="/" element={<Homepage />}>
-                                Homepage
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/levels" element={<Levels />}>
-                                Language Levels
-                            </NavLink>
-                        </li>{" "}
-                        <li>
-                            <NavLink to="/dictionary" element={<Dictionary />}>
-                                Dictionary
-                            </NavLink>
-                        </li>{" "}
-                        <li>
-                            <NavLink to="/askforhelp" element={<AskForHelp />}>
-                                Ask for help
-                            </NavLink>
-                        </li>{" "}
-                        <li>
-                            <NavLink to="/books" element={<Books />}>
-                                Books
-                            </NavLink>
-                        </li>{" "}
-                        <li>
-                            <NavLink
-                                to="/einbuergerungstest"
-                                element={<Search />}
-                            >
-                                Einbürgerungstest
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/settings" element={<Settings />}>
-                                Settings
-                            </NavLink>
-                        </li>
+                    <ul onClick={() => setOpen(false)}>
+                        <>
+                            <li style={{ marginBottom: "10px" }}>
+                                <NavLink to="/home" element={<Homepage />}>
+                                    Homepage
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/levels" element={<Levels />}>
+                                    Language Levels
+                                </NavLink>
+                            </li>{" "}
+                            <li>
+                                <NavLink to="/dictionary" element={<Dictionary />}>
+                                    Dictionary
+                                </NavLink>
+                            </li>{" "}
+                            <li>
+                                <NavLink to="/askforhelp" element={<AskForHelp />}>
+                                    Ask for help
+                                </NavLink>
+                            </li>{" "}
+                            <li>
+                                <NavLink to="/books" element={<Books />}>
+                                    Books
+                                </NavLink>
+                            </li>{" "}
+                            <li>
+                                <NavLink
+                                    to="/einbuergerungstest"
+                                    element={<Search />}
+                                >
+                                    Einbürgerungstest
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/settings" element={<Settings />}>
+                                    Settings
+                                </NavLink>
+                            </li>
+                        </>
                     </ul>
                 </div>
             )}

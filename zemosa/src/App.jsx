@@ -16,7 +16,6 @@ import { Dictionary } from "./components/dictionary/Dictionary";
 //import { ResultList } from "./components/dictionary/ResultList";
 
 import "./App.scss";
-// Create context
 
 function App() {
     return (
@@ -24,11 +23,12 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<Homepage />} />
-                <Route path="/levels" element={<Levels />} />
+                <Route path="/home" element={<Homepage />} />
+                <Route path="/levels/*" element={<Levels />} />
                 <Route path="/dictionary" element={<Dictionary />} />
                 <Route path="/askforhelp" element={<AskForHelp />} />
                 <Route path="/books" element={<Books />} />
-                <Route path="/einbuergerungstest" element={<Search />} />
+                <Route path="/einbuergerungstest/*" element={<Search />} />
                 <Route path="/settings" element={<Settings />} />
 
                 {/* <Route path="*" element={<Register />} /> */}
