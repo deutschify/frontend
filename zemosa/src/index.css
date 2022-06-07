@@ -12,5 +12,10 @@ code {
         monospace;
 }
 .App {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.social-media-icons {
+    float: right;
+    /* margin-left: 500px; */
 }

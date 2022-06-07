@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { HamburgerIcon } from "react-hamburger-icon";
-import { FaHeart } from "react-icons/fa";
+// import { GrLogin } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
 import Levels from "./Levels";
@@ -14,7 +16,10 @@ import Settings from "./Settings";
 import { Login } from "./Login";
 
 const Header = () => {
+    //state for the hamburger icon
     const [open, setOpen] = useState(false);
+    //state for the search baseURL
+    const [search, setSearch] = useState("");
     const headerStyles = {
         backgroundColor: "#ddd",
         color: "red",
@@ -32,26 +37,45 @@ const Header = () => {
         top: "0.5%",
         right: "0.5%",
     };
+    const searchBarStyles = {
+        position: "absolute",
+        top: "-0.3rem",
+        left: "48rem",
+    };
     // to make the fucking logIn Icon clickable, we need to use the navigate
-
-    // const navigateComponent = () => {
-    //     const navigate = useNavigate();
-
-    //     const logInHandler = () => {
-    //         navigate("/login");
-    //     };
-    // };
-    const hello = () => {
-        console.log("hello");
+    const navigate = useNavigate();
+    const logInHandler = () => {
+        navigate("/register");
     };
 
     return (
         <>
             <div className="header" style={headerStyles}>
                 Header
+                {/* Form for the search bar in the header*/}
+                <form
+                    style={searchBarStyles}
+                    className="searchForm"
+                    onSubmit={(e) => {
+                        e.preventDefault();
+                    }}
+                >
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Search..."
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
+                </form>
             </div>
 
-            <FaHeart style={logInStyles} onClick={hello} />
+            {/* <GrLogin style={logInStyles} onClick={logInHandler} /> */}
+            <FontAwesomeIcon
+                icon={faCoffee}
+                style={logInStyles}
+                onClick={logInHandler}
+            ></FontAwesomeIcon>
 
             <HamburgerIcon
                 style={burgerStyles}
