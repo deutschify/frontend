@@ -1,0 +1,33 @@
+.dictionary,
+.example-list,
+.meaning-list,
+.meaning-definitions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(67, 90, 90);
+
+    #dic-input {
+        padding: 1rem;
+        border-radius: 50px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-color: rgb(64, 104, 104);
+        background-color: rgb(216, 183, 167);
+    }
+    #dic-button {
+        padding: 1rem;
+        border-radius: 50px;
+        background-color: rgb(216, 183, 167);
+
+    }
+     #dic-input:hover {
+        background-color: rgb(64, 104, 104);
+        
+    }
+    #dic-button:hover {
+        background-color: rgb(64, 104, 104);
+        color: rgb(255, 255, 255);
+    }
+}
