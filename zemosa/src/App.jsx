@@ -1,11 +1,14 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 // import Login from "./components/Login";
-import { Register } from "./components/Register";
-import { Login } from "./components/Login";
-import { Test } from "./components/Test";
-import Search from "./components/einbuergerungstest";
-import { Dictionary } from "./components/dictionary/Dictionary";
-import { ResultList } from "./components/dictionary/ResultList";
+import Header from "./components/Header";
+import Homepage from "./components/Homepage";
+import Footer from "./components/Footer";
+// import { Register } from "./components/Register";
+// import { Login } from "./components/Login";
+// import { Test } from "./components/Test";
+// import Search from "./components/einbuergerungstest";
+// import { Dictionary } from "./components/dictionary/Dictionary";
+// import { ResultList } from "./components/dictionary/ResultList";
 
 import "./App.scss";
 // Create context
@@ -13,15 +16,11 @@ import "./App.scss";
 function App() {
     return (
         <div className="App">
-            <Search />
-            <ResultList/>
-            <Dictionary />
-            <Test />
+            <Header />
             <Routes>
-                <Route path="*" element={<Register />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/login/*" element={<Login />} />
+                <Route path="/" element={<Homepage />} />
             </Routes>
+            <Footer />
         </div>
     );
 }
