@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "react-hamburger-icon": "^1.0.2"
+    "react-hamburger-icon": "^1.0.2",
+    "react-icons": "^4.4.0"
   }
 }

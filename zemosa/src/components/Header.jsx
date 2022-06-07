@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import { HamburgerIcon } from "react-hamburger-icon";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { FaHeart } from "react-icons/fa";
+import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
+import Levels from "./Levels";
+// import { Dictionary } from "./dictionary/Dictionary";
+import { ResultList } from "./dictionary/ResultList";
+
+import AskForHelp from "./AskForHelp";
+import { Books } from "./Books";
+import Search from "./einbuergerungstest";
+import Settings from "./Settings";
+import { Login } from "./Login";
 
 const Header = () => {
     const [open, setOpen] = useState(false);
@@ -17,10 +27,31 @@ const Header = () => {
         top: "0.5%",
         left: "0.5%",
     };
+    const logInStyles = {
+        position: "absolute",
+        top: "0.5%",
+        right: "0.5%",
+    };
+    // to make the fucking logIn Icon clickable, we need to use the navigate
+
+    // const navigateComponent = () => {
+    //     const navigate = useNavigate();
+
+    //     const logInHandler = () => {
+    //         navigate("/login");
+    //     };
+    // };
+    const hello = () => {
+        console.log("hello");
+    };
 
     return (
         <>
-            <div style={headerStyles}>Header</div>
+            <div className="header" style={headerStyles}>
+                Header
+            </div>
+
+            <FaHeart style={logInStyles} onClick={hello} />
 
             <HamburgerIcon
                 style={burgerStyles}
@@ -35,29 +66,47 @@ const Header = () => {
                         width: "300px",
                         backgroundColor: "#ddd",
                         marginLeft: "5px",
+                        zIndex: "99",
                     }}
                 >
                     <ul>
                         <li style={{ marginBottom: "10px" }}>
-                            <NavLink to="/">Homepage</NavLink>
+                            <NavLink to="/" element={<Homepage />}>
+                                Homepage
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Language Levels</NavLink>
+                            <NavLink to="/levels" element={<Levels />}>
+                                Language Levels
+                            </NavLink>
                         </li>{" "}
                         <li>
-                            <NavLink to="/">Dictionary</NavLink>
+                            <NavLink to="/dictionary" element={<ResultList />}>
+                                Dictionary
+                            </NavLink>
                         </li>{" "}
                         <li>
-                            <NavLink to="/">Ask for Help</NavLink>
+                            <NavLink to="/askforhelp" element={<AskForHelp />}>
+                                Ask for help
+                            </NavLink>
                         </li>{" "}
                         <li>
-                            <NavLink to="/">Books</NavLink>
+                            <NavLink to="/books" element={<Books />}>
+                                Books
+                            </NavLink>
                         </li>{" "}
                         <li>
-                            <NavLink to="/">Einbürgerungstest</NavLink>
+                            <NavLink
+                                to="/einbuergerungstest"
+                                element={<Search />}
+                            >
+                                Einbürgerungstest
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to="/">Settings</NavLink>
+                            <NavLink to="/settings" element={<Settings />}>
+                                Settings
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

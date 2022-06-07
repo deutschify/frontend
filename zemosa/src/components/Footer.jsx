@@ -5,7 +5,11 @@ const Footer = () => {
         fontSize: "1.6rem",
         textAlign: "center",
     };
-    return <div style={footerStyles}>Footer</div>;
+    return (
+        <div style={footerStyles} className="footer">
+            Footer
+        </div>
+    );
 };
 
 export default Footer;
