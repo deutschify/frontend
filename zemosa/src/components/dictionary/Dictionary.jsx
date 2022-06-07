@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-
+import './dictionary.scss'
 export const Dictionary = () => {
     const [value, setValue] = useState("");
     const { inputValue, setInputValue } = useContext(AppContext);
@@ -16,18 +16,18 @@ export const Dictionary = () => {
     return (
         <div className="dictionary">
             <div className="dicteonary-input">
-                <input
+                <input id="dic-input"
                     type="text"
                     placeholder="Search"
                     onChange={handleInputChange}
                     value={value}
                     onKeyDown={handleInputKeyDown}
                 />
-                <button onClick={handleSubmit}>Search</button>
+                <button id="dic-button" onClick={handleSubmit}>Search</button>
             </div>
             {inputValue && (
                 <h3>
-                    Result for:<span>Happy</span>
+                    Result for:<span>{inputValue}</span>
                 </h3>
             )}
         </div>
