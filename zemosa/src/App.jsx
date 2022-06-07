@@ -10,10 +10,10 @@ import Search from "./components/einbuergerungstest";
 import Settings from "./components/Settings";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
-// import { Test } from "./components/Test";
+//import { Test } from "./components/Test";
 
-// import { Dictionary } from "./components/dictionary/Dictionary";
-import { ResultList } from "./components/dictionary/ResultList";
+import { Dictionary } from "./components/dictionary/Dictionary";
+//import { ResultList } from "./components/dictionary/ResultList";
 
 import "./App.scss";
 // Create context
@@ -25,7 +25,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/levels" element={<Levels />} />
-                <Route path="/dictionary" element={<ResultList />} />
+                <Route path="/dictionary" element={<Dictionary />} />
                 <Route path="/askforhelp" element={<AskForHelp />} />
                 <Route path="/books" element={<Books />} />
                 <Route path="/einbuergerungstest" element={<Search />} />

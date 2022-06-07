@@ -6,8 +6,8 @@ import { faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
 import Levels from "./Levels";
-// import { Dictionary } from "./dictionary/Dictionary";
-import { ResultList } from "./dictionary/ResultList";
+import { Dictionary } from "./dictionary/Dictionary";
+//import { ResultList } from "./dictionary/ResultList";
 
 import AskForHelp from "./AskForHelp";
 import { Books } from "./Books";
@@ -105,7 +105,7 @@ const Header = () => {
                             </NavLink>
                         </li>{" "}
                         <li>
-                            <NavLink to="/dictionary" element={<ResultList />}>
+                            <NavLink to="/dictionary" element={<Dictionary />}>
                                 Dictionary
                             </NavLink>
                         </li>{" "}
