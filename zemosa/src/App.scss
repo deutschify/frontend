@@ -6,12 +6,23 @@ $font-size: 1.6rem;
 $viewport-homepage: 100vh;
 $footer-padding: 3rem 0;
 $header-padding: 5rem ;
+.App{
+     background-image: url("../../zemosa/public/images/zemosahp.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
 
+}
 .homepage {
     padding: 2rem;
     display: flex;
     height: $viewport-homepage;
     background: $background-content;
+    background-image: url("../../zemosa/public/images/zemosahp.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .footer {
@@ -77,4 +88,43 @@ $header-padding: 5rem ;
 .ul-header a{
      text-decoration: none;
    
+}
+//////////////////////////////////////
+//dic
+
+.dictionary,
+.example-list,
+.meaning-list,
+.meaning-definitions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $background-content;
+   margin: 8rem;
+   
+
+
+    #dic-input {
+        padding: 1rem;
+        border-radius: 50px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-color: rgb(64, 104, 104);
+        
+    }
+    #dic-button {
+        padding: 1rem;
+        border-radius: 50px;
+        // background-color: rgb(216, 183, 167);
+
+    }
+    //  #dic-input:hover {
+    //     background-color: rgb(64, 104, 104);}
+        
+    
+    // #dic-button:hover {
+    //     background-color: rgb(64, 104, 104);
+    //     color: rgb(255, 255, 255);
+    // }
 }

@@ -5,7 +5,7 @@ import { ResultList } from "./ResultList";
 // import { MeaningList } from "./MeaningList";
 // import { Synonym } from "./Synonym";
 // import { Antonym } from "./Antonym";
-import "./dictionary.scss";
+import "../../../src/App.scss";
 export const Dictionary = () => {
     const [value, setValue] = useState("");
     const { inputValue, setInputValue } = useContext(AppContext);

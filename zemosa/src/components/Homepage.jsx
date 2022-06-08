@@ -3,10 +3,10 @@ const Homepage = () => {
     return (
         <div className="homepage">
             <h2>HomePage</h2>
-            <img
-                src="../../public/images/homepage-img.png"
+            {/* <img
+                src="../../public/images/zemosahp.png"
                 alt="homePageImage"
-            />
+            /> */}
             {/* <Search />
             <ResultList />
             <Dictionary />
