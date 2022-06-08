@@ -17,10 +17,7 @@ $header-padding: 5rem;
     display: flex;
     height: $viewport-homepage;
     background: $background-content;
-    background-image: url("../../zemosa/public/images/zemosahp.png");
-    background-size: 40%;
-    background-repeat: no-repeat;
-    background-position: center;
+   
 }
 
 .footer {
@@ -115,7 +112,11 @@ $header-padding: 5rem;
     //     color: rgb(255, 255, 255);
     // }
 }
-
+.footer-icon{
+    padding:$padding;
+    font-size:$font-size;
+    float:right
+}
 // Omars Styling
 .slider {
     position: relative;
@@ -125,10 +126,13 @@ $header-padding: 5rem;
     align-items: center;
 
     .slideshow-images {
+        margin-top:9rem;
         width: 1000px;
-        height: 500px;
+        height: 600px;
         border-radius: 10px;
+        object-fit: cover;
     }
+   
     .slideshow-right-arrow {
         position: absolute;
         top: 50%;
