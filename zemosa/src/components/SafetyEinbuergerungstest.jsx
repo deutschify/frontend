@@ -20,7 +20,7 @@ const Search = () => {
                         type="text"
                         placeholder="search..."
                         onChange={(e) => setQuery(e.target.value)}
-                    />
+                    /> 
                     {QuestionDE.filter((testQuestion) => {
                         if (query == "") {
                             return testQuestion;

@@ -12,19 +12,28 @@
         margin-top: -60px;
 
         .imgGermanMap{
-            width: 60em;
+            width: 70em;
             position: fixed;
             top: 100px;
         }
         .bundesland{
         
+        .bundesland:hover{
+           
         }
-
+        }
+        
     .bw{
         position: fixed;
-        top: 550px;
-        left: 400px;
+        top: 560px;
+        left: 550px;
+        display: none;
+        
+        .bw:hover{
+          display: block;
      }
+     }
+     
     // .bayern{
     //     position: fixed;
     //     top: 530px;
@@ -99,5 +108,9 @@
     //     right: 700px;
 
     // }
+    }
+    .searchInput{
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }

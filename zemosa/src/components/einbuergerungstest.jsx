@@ -9,6 +9,7 @@ const Search = () => {
     // Import from AppContext the success state variable in order to show if someone is logged in
     const { isLoggedIn, setIsLoggedIn } = useContext(AppContext);
     const [selectBundesland, setSelectBundesland] = useState({display: 'none'})
+    const [query, setQuery] = useState("");
     // const [query, setQuery] = useState("");
 
 
@@ -45,6 +46,35 @@ const Search = () => {
                     <p className="bundesland sa">Sachsen-Anhalt</p>
                     <p className="bundesland sh">Schleswig-Holstein</p>
                     <p className="bundesland th">Thüringen</p> */}
+                </div>
+                <div className="searchBar">
+                    {/* <h1>Einbürgerungstestfragen</h1> */}
+                    <input
+                    className="searchInput"
+                        type="text"
+                        placeholder="search..."
+                        onChange={(e) => setQuery(e.target.value)}
+                    />
+                    {QuestionDE.filter((testQuestion) => {
+                        if (query == "") {
+                            return testQuestion;
+                        } else if (
+                            testQuestion.question
+                                .toLowerCase()
+                                .includes(query.toLowerCase())
+                        ) {
+                            return testQuestion;
+                        } else if (testQuestion.number.includes(query)) {
+                            return testQuestion;
+                        }
+                    }).map((testQuestion) => {
+                        return (
+                            <div key={testQuestion.number}>
+                                {testQuestion.number}: {""}
+                                {testQuestion.question}
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </>
