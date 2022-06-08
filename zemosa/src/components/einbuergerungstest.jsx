@@ -30,7 +30,7 @@ const Search = () => {
                     }}>Baden-Württemberg</p>
 
                     
-                    <p className="bundesland bayern">Bayern</p>
+                    {/* <p className="bundesland bayern">Bayern</p>
                     <p className="bundesland berlin">Berlin</p>
                     <p className="bundesland brandenburg">Brandenburg</p>
                     <p className="bundesland bremen">Bremen</p>
@@ -44,7 +44,7 @@ const Search = () => {
                     <p className="bundesland sachsen">Sachsen</p>
                     <p className="bundesland sa">Sachsen-Anhalt</p>
                     <p className="bundesland sh">Schleswig-Holstein</p>
-                    <p className="bundesland th">Thüringen</p>
+                    <p className="bundesland th">Thüringen</p> */}
                 </div>
             </div>
         </>
