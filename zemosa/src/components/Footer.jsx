@@ -1,3 +1,4 @@
+import "../App.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faYoutube,
@@ -6,7 +7,6 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
     const footerStyles = {
-        backgroundColor: "#ddd",
         color: "red",
         fontSize: "1.6rem",
         textAlign: "center",
