@@ -18,9 +18,10 @@ export const Login = () => {
     const [pwd, setPwd] = useState("");
     const [errMsg, setErrMsg] = useState("");
 
-    const [users, setUsers] = useState([]);
 
     const navigate = useNavigate();
+
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         userRef.current.focus();

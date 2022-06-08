@@ -6,18 +6,21 @@ import {
     faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
-    const footerStyles = {
-        color: "red",
-        fontSize: "1.6rem",
-        textAlign: "center",
-    };
     return (
-        <div style={footerStyles} className="footer">
-            Footer
+        <div className="footer">
             <div className="social-media-icons">
-                <FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
-                <FontAwesomeIcon icon={faYoutube}></FontAwesomeIcon>
-                <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
+                <FontAwesomeIcon
+                    className="footer-icon"
+                    icon={faGithub}
+                ></FontAwesomeIcon>
+                <FontAwesomeIcon
+                    className="footer-icon"
+                    icon={faYoutube}
+                ></FontAwesomeIcon>
+                <FontAwesomeIcon
+                    className="footer-icon"
+                    icon={faFacebook}
+                ></FontAwesomeIcon>
             </div>
         </div>
     );

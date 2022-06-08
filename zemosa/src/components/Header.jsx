@@ -22,31 +22,33 @@ const Header = () => {
     const { isLoggedIn, setIsLoggedIn } = useContext(AppContext);
 
     const headerStyles = {
-        color: "red",
+       
         fontSize: "1.6rem",
         textAlign: "center",
         position: "fixed",
+        padding: "2.2rem"
     };
     const burgerStyles = {
         position: "absolute",
         top: "0.5%",
         left: "0.5%",
-        margin: " 1rem  2rem ",
+        margin: " 2rem  2rem ",
         position: "fixed",
         zIndex: "1",
+        
     };
     const logInStyles = {
         position: "absolute",
         top: "0.5%",
         right: "0.5%",
         cursor: "pointer",
-        margin: " 1rem  2rem ",
+        margin: " 2rem  2rem ",
         position: "fixed",
         zIndex: "1",
     };
     const searchBarStyles = {
         position: "absolute",
-        top: "-0.3rem",
+        top: "-0.5rem",
         left: "48rem",
         margin: " 2rem  2rem ",
     };
@@ -60,7 +62,6 @@ const Header = () => {
     return (
         <>
             <div className="header" style={headerStyles}>
-                Header
                 {/* Form for the search bar in the header*/}
                 <form
                     style={searchBarStyles}
@@ -70,6 +71,7 @@ const Header = () => {
                     }}
                 >
                     <input
+                        className="login-input "
                         type="text"
                         id="search-header"
                         placeholder="Search..."
@@ -93,73 +95,82 @@ const Header = () => {
             </div>
 
             <HamburgerIcon
+                className="listIcon"
                 style={burgerStyles}
                 open={open}
                 onClick={() => setOpen(!open)}
             />
-            {open && (
-                <div
-                    className="ham-list"
-                    style={{
-                        height: "600px",
-                        width: "300px",
-                        backgroundColor: "#ddd",
-                        marginLeft: "5px",
-                        position: "absolute",
-                        zIndex: "1",
-                        margin: " 3rem  2rem ",
-                    }}
-                >
-                    <ul className="ul-header" onClick={() => setOpen(false)}>
-                        <>
-                            <li style={{ marginBottom: "10px" }}>
-                                <NavLink to="/home" element={<Homepage />}>
-                                    Homepage
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/levels" element={<Levels />}>
-                                    Language Levels
-                                </NavLink>
-                            </li>{" "}
-                            <li>
-                                <NavLink
-                                    to="/dictionary"
-                                    element={<Dictionary />}
-                                >
-                                    Dictionary
-                                </NavLink>
-                            </li>{" "}
-                            <li>
-                                <NavLink
-                                    to="/askforhelp"
-                                    element={<AskForHelp />}
-                                >
-                                    Ask for help
-                                </NavLink>
-                            </li>{" "}
-                            <li>
-                                <NavLink to="/books" element={<Books />}>
-                                    Books
-                                </NavLink>
-                            </li>{" "}
-                            <li>
-                                <NavLink
-                                    to="/einbuergerungstest"
-                                    element={<Search />}
-                                >
-                                    Einbürgerungstest
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to="/settings" element={<Settings />}>
-                                    Settings
-                                </NavLink>
-                            </li>
-                        </>
-                    </ul>
-                </div>
-            )}
+            {open &&
+                (
+                    <div
+                        className="ham-list"
+                        style={{
+                            height: "600px",
+                            width: "300px",
+
+                            marginLeft: "5px",
+                            position: "absolute",
+                            zIndex: "1",
+                            margin: " 3rem  2rem ",
+                            borderRadius: "10%",
+                        }}
+                    >
+                        <ul
+                            className="ul-header"
+                            onClick={() => setOpen(false)}
+                        >
+                            <>
+                                <li style={{ marginBottom: "10px" }}>
+                                    <NavLink to="/home" element={<Homepage />}>
+                                        Homepage
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to="/levels" element={<Levels />}>
+                                        Language Levels
+                                    </NavLink>
+                                </li>{" "}
+                                <li>
+                                    <NavLink
+                                        to="/dictionary"
+                                        element={<Dictionary />}
+                                    >
+                                        Dictionary
+                                    </NavLink>
+                                </li>{" "}
+                                <li>
+                                    <NavLink
+                                        to="/askforhelp"
+                                        element={<AskForHelp />}
+                                    >
+                                        Ask for help
+                                    </NavLink>
+                                </li>{" "}
+                                <li>
+                                    <NavLink to="/books" element={<Books />}>
+                                        Books
+                                    </NavLink>
+                                </li>{" "}
+                                <li>
+                                    <NavLink
+                                        to="/einbuergerungstest"
+                                        element={<Search />}
+                                    >
+                                        Einbürgerungstest
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink
+                                        to="/settings"
+                                        element={<Settings />}
+                                    >
+                                        Settings
+                                    </NavLink>
+                                </li>
+                            </>
+                        </ul>
+                    </div>
+                )}
         </>
     );
 };
