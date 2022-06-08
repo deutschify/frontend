@@ -1,7 +1,7 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import { useState, useContext } from "react";
 import { AppContext } from "../context/AppContext";
-
+import './Einbuergerungstest.scss';
 import { Login } from "./Login";
 import QuestionDE from "../data/einbuergerungstestJSON/einbuergerungstestDeutschland";
 
@@ -15,12 +15,14 @@ const Search = () => {
         <>
             {isLoggedIn ? (
                 <div className="searchBar">
-                    <h1>Einbürgerungstestfragen</h1>
+                    <h1 className="title">Einbürgerungstestfragen</h1>
                     <input
+                        className="searchInput"
                         type="text"
-                        placeholder="search..."
+                        placeholder="nach einer bestimmten Frage oder Thema suchen..."
                         onChange={(e) => setQuery(e.target.value)}
                     />
+                    <div className="allJsonData">
                     {QuestionDE.filter((testQuestion) => {
                         if (query == "") {
                             return testQuestion;
@@ -35,12 +37,15 @@ const Search = () => {
                         }
                     }).map((testQuestion) => {
                         return (
-                            <div key={testQuestion.number}>
-                                {testQuestion.number}: {""}
-                                {testQuestion.question}
+                            <div className="jsonData" key={testQuestion.number}>
+                                {testQuestion.number}: {""} <br /><br />
+                                {testQuestion.question} <br /><br />
+                                 <div className="answer">{testQuestion.correctAnswer}</div>
                             </div>
+                           
                         );
                     })}
+                    </div>
                 </div>
             ) : (
                 <Login />
