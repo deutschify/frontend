@@ -2,7 +2,6 @@ import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { useRef, useState, useEffect, useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import axios from "axios";
-import { Test } from "./Test";
 import { Register } from "./Register";
 import Homepage from "./Homepage";
 
@@ -10,7 +9,7 @@ const usersUrl = "http://localhost:5050/users";
 
 export const Login = () => {
     // Import from AppContext the success state variable in order to show if someone is logged in
-    const { isLoggedIn, setIsLoggedIn } = useContext(AppContext);
+    const { isLoggedIn, setIsLoggedIn, setTranslatedLanguage } = useContext(AppContext);
 
     const userRef = useRef();
     const errRef = useRef();
@@ -45,6 +44,7 @@ export const Login = () => {
             if (acc.firstName === user && acc.password === pwd) {
                 console.log(user, pwd);
                 setIsLoggedIn(true);
+                setTranslatedLanguage(acc.language);
                 navigate("/home");
             } else {
                 setErrMsg("first name or password doesn't match. Try again!");

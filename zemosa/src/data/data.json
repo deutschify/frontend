@@ -1,18 +1,13 @@
 {
   "users": [
     {
-      "firstName": "Mezekir",
-      "lastName": "Abraham",
-      "email": "dimo24@web.de",
-      "password": "123",
-      "id": 1
-    },
-    {
       "firstName": "admin",
       "lastName": "admin",
       "email": "admin@test.com",
-      "password": "123",
-      "id": 2
+      "password": "0000",
+      "birthDate": "2017-02-07T23:00:00.000Z",
+      "language": "ar",
+      "id": 1
     }
   ]
 }
