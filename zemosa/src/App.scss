@@ -1,17 +1,26 @@
-$background: rgba(52, 149, 191, 0.781);
-$background-form: rgba(241, 222, 127, 0.739);
-$background-content: rgba(70, 154, 190, 0.781);
+$background: #bcdef9;
+$background-form: #a4c4f3;
+$background-content: #deefff;
 $padding: 1rem;
-$font-size: 1rem;
+$font-size: 1.6rem;
 $viewport-homepage: 100vh;
 $footer-padding: 3rem 0;
-$header-padding: 2rem 0;
-
+$header-padding: 5rem;
+.App {
+    background-image: url("../../zemosa/public/images/zemosahp.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .homepage {
     padding: 2rem;
     display: flex;
     height: $viewport-homepage;
     background: $background-content;
+    background-image: url("../../zemosa/public/images/zemosahp.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .footer {
@@ -27,6 +36,7 @@ $header-padding: 2rem 0;
     position: fixed;
     top: 0;
     width: 100vw;
+    height: 5vh;
     z-index: 1;
 }
 #search-header {
@@ -42,7 +52,7 @@ $header-padding: 2rem 0;
     padding: 3rem;
 }
 .form-container {
-    margin: 5rem 2rem;
+    margin: 6rem 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -51,7 +61,59 @@ $header-padding: 2rem 0;
 }
 .login-input {
     padding: $padding;
-    background: $background-form;
+    width: 20rem;
+    border-radius: 50px;
+}
+.sign-in {
+    font-size: $font-size;
+}
+.listIcon {
+    padding: 0.4rem;
+    //      transform: translate(-50% +50%);
+    //  transition: transform 2s ease-in;
+}
+.ham-list {
+    background-color: $background-form;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-attachment: $background-content;
+}
+.ul-header a {
+    text-decoration: none;
+}
+//////////////////////////////////////
+//dic
+
+.dictionary,
+.example-list,
+.meaning-list,
+.meaning-definitions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $background-content;
+    margin: 8rem;
+
+    #dic-input {
+        padding: 1rem;
+        border-radius: 50px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-color: rgb(64, 104, 104);
+    }
+    #dic-button {
+        padding: 1rem;
+        border-radius: 50px;
+        // background-color: rgb(216, 183, 167);
+    }
+    //  #dic-input:hover {
+    //     background-color: rgb(64, 104, 104);}
+
+    // #dic-button:hover {
+    //     background-color: rgb(64, 104, 104);
+    //     color: rgb(255, 255, 255);
+    // }
 }
 
 // Omars Styling
