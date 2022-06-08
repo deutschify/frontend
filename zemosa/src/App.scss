@@ -1,11 +1,11 @@
-$background: rgba(52, 149, 191, 0.781);
-$background-form: rgba(241, 222, 127, 0.739);
-$background-content: rgba(70, 154, 190, 0.781);
+$background: #BCDEF9;
+$background-form: #A4C4F3;
+$background-content: #DEEFFF;
 $padding: 1rem;
-$font-size: 1rem;
+$font-size: 1.6rem;
 $viewport-homepage: 100vh;
 $footer-padding: 3rem 0;
-$header-padding: 2rem 0;
+$header-padding: 5rem ;
 
 .homepage {
     padding: 2rem;
@@ -27,6 +27,7 @@ $header-padding: 2rem 0;
     position: fixed;
     top: 0;
     width: 100vw;
+    height: 5vh;
     z-index: 1;
 }
 #search-header {
@@ -39,10 +40,12 @@ $header-padding: 2rem 0;
     margin: 6rem;
 }
 .social-media-icons {
+
+
     padding: 3rem;
 }
 .form-container {
-    margin: 5rem 2rem;
+    margin: 6rem 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -51,5 +54,31 @@ $header-padding: 2rem 0;
 }
 .login-input {
     padding: $padding;
-    background: $background-form;
+  width:20rem;
+    border-radius: 50px;
+    
+}
+.sign-in{
+    font-size:$font-size
+}
+.listIcon{
+    padding: 0.4rem;
+//      transform: translate(-50% +50%);
+//  transition: transform 2s ease-in;
+}
+.ham-list {
+    background-color:$background-form;
+    font-size:1.5rem;
+    padding: 0.5rem;
+ background-attachment:$background-content;
+ 
+   
+}
+.ul-header a{
+     text-decoration: none;
+   
+}
+.ul-header{
+//       transform: translate(255, 255);
+// transition: transform 2s ease-in;
 }
