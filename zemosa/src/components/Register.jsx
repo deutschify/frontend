@@ -34,7 +34,7 @@ export const Register = () => {
         const { firstName, lastName, email, password } = data;
 
         // save it to our Json server
-        await axios.post("http://localhost:5000/users", {
+        await axios.post("http://localhost:5050/users", {
             firstName,
             lastName,
             email,
