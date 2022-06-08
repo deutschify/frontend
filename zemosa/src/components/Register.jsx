@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -17,6 +17,8 @@ const schema = yup.object().shape({
 
 export const Register = () => {
     const [isRegistered, setIsRegistered] = useState(false);
+    
+    const navigate = useNavigate()
 
     //destructuring in order to use the properties of useForm
     const {
@@ -42,6 +44,7 @@ export const Register = () => {
         });
 
         setIsRegistered(true);
+        navigate("/login")
     };
 
     return (
