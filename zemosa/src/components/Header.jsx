@@ -85,7 +85,7 @@ const Header = () => {
                 {isLoggedIn ? (
                     <LogOut logOut={setIsLoggedIn}/>
                 ) : (
-                    <div class="login" onClick={logInHandler}>
+                    <div className="login" onClick={logInHandler}>
                         <span>Log In</span>
                         <FiLogIn />
                     </div>
