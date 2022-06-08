@@ -11,8 +11,15 @@ export const AppProvider = ({ children }) => {
     const [languages, setLanguages] = useState([]);
     const [defaultLanguage, setDefaultLanguage] = useState("de");
     const [translatedLanguage, setTranslatedLanguage] = useState("en");
-    const [text, setText] = useState("prüfung");
+    const [text, setText] = useState("Ich habe eine prüfung");
     const [translatedText, setTranslatedText] = useState("");
+
+    // These are for dictionary state variables that
+    const [inputValue, setInputValue] = useState("");
+    const value = { inputValue, setInputValue };
+
+    // If someone isn't logged in, then they should have limited access to the site
+    const [ isLoggedIn, setIsLoggedIn] = useState(false);
 
     // we are putting the list of languages we get from the API into the state variable of [languages, setLanguages]
     useEffect(() => {
@@ -58,6 +65,9 @@ export const AppProvider = ({ children }) => {
                 translatedText,
                 setTranslatedText,
                 translate,
+                inputValue, setInputValue,
+                isLoggedIn, 
+                setIsLoggedIn
             }}
         >
             {children}

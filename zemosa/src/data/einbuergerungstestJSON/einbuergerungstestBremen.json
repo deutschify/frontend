@@ -1,0 +1,102 @@
+[
+    {
+    "number": "Frage 341",
+    "category": "Bremen",
+    "question": "Welches Wappen gehört zur Freien Hansestadt Bremen?",
+    "answerA": "1",
+    "answerB": "2",
+    "answerC": "3",
+    "answerD": "4",
+    "correctAnswer": "3"
+},
+{
+    "number": "Frage 342",
+    "category": "Bremen",
+    "question": "Welches ist ein Stadtteil von Bremen?",
+    "answerA": "Altona",
+    "answerB": "Hemelingen",
+    "answerC": "Pankow",
+    "answerD": "Babelsberg",
+    "correctAnswer": "Hemelingen"
+},
+{
+    "number": "Frage 343",
+    "category": "Bremen",
+    "question": "Für wie viele Jahre wird das Landesparlament in Bremen gewählt?",
+    "answerA": "3",
+    "answerB": "4",
+    "answerC": "5",
+    "answerD": "6",
+    "correctAnswer": "4"
+},
+{
+    "number": "Frage 344",
+    "category": "Bremen",
+    "question": "Ab welchem Alter darf man in Bremen bei den Wahlen zur Bürgerschaft (Landtag) wählen?",
+    "answerA": "14",
+    "answerB": "16",
+    "answerC": "18",
+    "answerD": "20",
+    "correctAnswer": "16"
+},
+{
+    "number": "Frage 345",
+    "category": "Bremen",
+    "question": "Welche Farben hat die Landesflagge von Bremen?",
+    "answerA": "blau-weiß-rot",
+    "answerB": "rot-weiß",
+    "answerC": "grün-weiß-rot",
+    "answerD": "schwarz-gold",
+    "correctAnswer": "rot-weiß"
+},
+{
+    "number": "Frage 346",
+    "category": "Bremen",
+    "question": "Wo können Sie sich in Bremen über politische Themen informieren?",
+    "answerA": "beim Ordnungsamt der Gemeinde",
+    "answerB": "bei der Landeszentrale für politische Bildung",
+    "answerC": "bei den Kirchen",
+    "answerD": "bei der Verbraucherzentrale",
+    "correctAnswer": "bei der Landeszentrale für politische Bildung"
+},
+{
+    "number": "Frage 347",
+    "category": "Bremen",
+    "question": "Was ist ein deutscher Stadtstaat?",
+    "answerA": "Bremen",
+    "answerB": "München",
+    "answerC": "Frankfurt",
+    "answerD": "Erfurt",
+    "correctAnswer": "Bremen"
+},
+{
+    "number": "Frage 348",
+    "category": "Bremen",
+    "question": "Welches Bundesland ist Bremen",
+    "answerA": "1",
+    "answerB": "2",
+    "answerC": "3",
+    "answerD": "4",
+    "correctAnswer": "1"
+},
+{
+    "number": "Frage 349",
+    "category": "Bremen",
+    "question": "Wie nennt man den Regierungschef / die Regierungschefin des Stadtstaates Bremen?",
+    "answerA": "Ministerpräsident / Ministerpräsidentin",
+    "answerB": "Erster Bürgermeister / Erste Bürgermeisterin",
+    "answerC": "Präsident / Präsidentin des Senats",
+    "answerD": "Regierender Bürgermeister / Regierende Bürgermeisterin",
+    "correctAnswer": "Präsident / Präsidentin des Senats"
+},
+{
+    "number": "Frage 350",
+    "category": "Bremen",
+    "question": "Welchen Senator / welche Senatorin hat Bremen nicht?",
+    "answerA": "Senator / Senatorin für Außenbeziehungen",
+    "answerB": "Finanzsenator / Finanzsenatorin",
+    "answerC": "Justizsenator / Justizsenatorin",
+    "answerD": "Innensenator / Innensenatorin",
+    "correctAnswer": "Senator / Senatorin für Außenbeziehungen"
+}
+]

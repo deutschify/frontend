@@ -1,0 +1,102 @@
+[
+    {
+        "number": "Frage 431",
+        "category": "Sachsen-Anhalt",
+        "question": "Welches Wappen gehört zum Bundesland Sachsen-Anhalt?",
+        "answerA": "1",
+        "answerB": "2",
+        "answerC": "3",
+        "answerD": "4",
+        "correctAnswer": "4"
+    },
+    {
+        "number": "Frage 432",
+        "category": "Sachsen-Anhalt",
+        "question": "Welches ist ein Landkreis in Sachsen-Anhalt?",
+        "answerA": "Ammerland",
+        "answerB": "Altötting",
+        "answerC": "Uckermark",
+        "answerD": "Börde",
+        "correctAnswer": "Börde"
+    },
+    {
+        "number": "Frage 433",
+        "category": "Sachsen-Anhalt",
+        "question": "Für wie viele Jahre wird der Landtag in Sachsen-Anhalt gewählt?",
+        "answerA": "3",
+        "answerB": "4",
+        "answerC": "5",
+        "answerD": "6",
+        "correctAnswer": "5"
+    },
+    {
+        "number": "Frage 434",
+        "category": "Sachsen-Anhalt",
+        "question": "Ab welchem Alter darf man in Sachsen-Anhalt bei Kommunalwahlen wählen?",
+        "answerA": "14",
+        "answerB": "16",
+        "answerC": "18",
+        "answerD": "20",
+        "correctAnswer": "16"
+    },
+    {
+        "number": "Frage 435",
+        "category": "Sachsen-Anhalt",
+        "question": "Welche Farben hat die Landesflagge von Sachsen-Anhalt?",
+        "answerA": "blau-weiß-rot",
+        "answerB": "gelb-schwarz",
+        "answerC": "grün-weiß-rot",
+        "answerD": "weiß-rot",
+        "correctAnswer": "gelb-schwarz"
+    },
+    {
+        "number": "Frage 436",
+        "category": "Sachsen-Anhalt",
+        "question": "Wo können Sie sich in Sachsen-Anhalt über politische Themen informieren?",
+        "answerA": "bei den Kirchen",
+        "answerB": "bei der Landeszentrale für politische Bildung",
+        "answerC": "beim Ordnungsamt der Gemeinde",
+        "answerD": "bei der Verbraucherzentrale",
+        "correctAnswer": "bei der Landeszentrale für politische Bildung"
+    },
+    {
+        "number": "Frage 437",
+        "category": "Sachsen-Anhalt",
+        "question": "Die Landeshauptstadt von Sachsen-Anhalt heißt …",
+        "answerA": "Halle.",
+        "answerB": "Dessau.",
+        "answerC": "Magdeburg.",
+        "answerD": "Wittenberg.",
+        "correctAnswer": "Magdeburg."
+    },
+    {
+        "number": "Frage 438",
+        "category": "Sachsen-Anhalt",
+        "question": "Welches Bundesland ist Sachsen-Anhalt?",
+        "answerA": "1",
+        "answerB": "2",
+        "answerC": "3",
+        "answerD": "4",
+        "correctAnswer": "3"
+    },
+    {
+        "number": "Frage 439",
+        "category": "Sachsen-Anhalt",
+        "question": "Wie nennt man den Regierungschef / die Regierungschefin in Sachsen-Anhalt?",
+        "answerA": "Erster Minister / Erste Ministerin",
+        "answerB": "Premierminister / Premierministerin",
+        "answerC": "Bürgermeister / Bürgermeisterin",
+        "answerD": "Ministerpräsident / Ministerpräsidentin",
+        "correctAnswer": "Ministerpräsident / Ministerpräsidentin"
+    },
+    {
+        "number": "Frage 440",
+        "category": "Sachsen-Anhalt",
+        "question": "Welchen Minister / welche Ministerin hat Sachsen-Anhalt nicht?",
+        "answerA": "Justizminister / Justizministerin",
+        "answerB": "Außenminister / Außenministerin",
+        "answerC": "Finanzminister / Finanzministerin",
+        "answerD": "Innenminister / Innenministerin",
+        "correctAnswer": "Außenminister / Außenministerin"
+    }
+]

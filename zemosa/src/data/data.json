@@ -12,6 +12,13 @@
       "lastName": "kol",
       "email": "xy@z.com",
       "password": "123",
+      "id": 1
+    },
+    {
+      "firstName": "admin",
+      "lastName": "admin",
+      "email": "admin@test.com",
+      "password": "123",
       "id": 2
     }
   ]
