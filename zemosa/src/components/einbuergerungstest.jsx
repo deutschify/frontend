@@ -18,7 +18,7 @@ const Search = () => {
                 <div className="map">
                     <img
                         className="imgGermanMap"
-                        src="../../public/images/deutschlandMap.jpg"
+                        src="../../public/images/deutschlandMap.png"
                     />
                     <p className="bw">Baden-Württemberg</p>
                     <p className="bayern">Bayern</p>

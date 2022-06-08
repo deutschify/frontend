@@ -1,29 +1,100 @@
 .einbuergerungstest {
-    margin-top: 150px;
-    display: flex;
-    align-items: center;
+    margin-top: 100px;
 
-    .title{
+    .title {
+        text-align: center;
+       
+    }
+    .map {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -60px;
+
+        .imgGermanMap{
+            width: 70em;
+            position: fixed;
+            top: 100px;
+        }
+
+    .bw{
+        position: fixed;
+        top: 550px;
+        left: 550px;
+     }
+    .bayern{
+        position: fixed;
+        top: 530px;
+        left: 780px;
+    }
+    .berlin{
+        position: fixed;
+        top: 290px;
+        right: 640px;
+    }
+    .brandenburg{
+        position: fixed;
+        top: 320px;
+        right: 550px;
+    }
+    .bremen{
+        position: fixed;
+        top: 250px;
+        left: 650px;
+    }
+    .hamburg{
+        position: fixed;
+        top: 220px;
+    }
+    .hessen{
+        position: fixed;
+        top: 400px;
+        left: 660px;
+    }
+    .mv{
+        position: fixed;
+        top: 200px;
+        right: 500px;
+    }
+    .niedersachsen{
+        position: fixed;
+        top: 280px;
+        left: 640px;
+    }
+    .nrw{
+        position: fixed;
+        top: 350px;
+        left: 500px;
+    }
+    .rp{
+        position: fixed;
+        top: 450px;
+        left: 500px;
+    }
+    .saarland{
+        position: fixed;
+        top: 500px;
+        left: 530px;
+    }
+    .sachsen{
+        position: fixed;
+        top: 400px;
+        right: 600px;
+    }
+    .sa{
+        position: fixed;
+        top: 340px;
+        right: 620px;
+    }
+    .sh{
+        position: fixed;
+        top: 180px;
+    }
+    .th{
+        position: fixed;
+        top: 400px;
+        right: 700px;
 
     }
-
-    // .bw{
-    //     position: absolute;
-    //     top: 550px;
-    //     left: 600px;
-    // }
-    // .bayern{
-    //     position: absolute;
-    //     top: 500px;
-    //     left: 750px;
-    // }
-    // .berlin{
-    //     position: absolute;
-    //     top:310px;
-    //     right: 650px;
-    // }
-    // .brandenburg{
-
-
-    // }
+    }
 }
