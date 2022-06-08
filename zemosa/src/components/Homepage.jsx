@@ -91,7 +91,6 @@ const Homepage = () => {
             {/* <Search />
             <ResultList />
             <Dictionary />
-            <Test />
             <Routes>
                 <Route path="*" element={<Register />} />
                 <Route path="/register" element={<Register />} />

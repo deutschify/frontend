@@ -1,5 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
+// import QuestionDE from "../data/einbuergerungstestJSON/einbuergerungstestDeutschland";
+
 
 export const AppContext = createContext();
 
@@ -10,13 +12,13 @@ const translateUrl = "https://libretranslate.de/translate";
 export const AppProvider = ({ children }) => {
     const [languages, setLanguages] = useState([]);
     const [defaultLanguage, setDefaultLanguage] = useState("de");
-    const [translatedLanguage, setTranslatedLanguage] = useState("en");
-    const [text, setText] = useState("Ich habe eine prüfung");
+    const [translatedLanguage, setTranslatedLanguage] = useState([]);
+    const [text, setText] = useState("");
     const [translatedText, setTranslatedText] = useState("");
 
     // These are for dictionary state variables that
     const [inputValue, setInputValue] = useState("");
-    const value = { inputValue, setInputValue };
+    // const value = { inputValue, setInputValue };
 
     // If someone isn't logged in, then they should have limited access to the site
     const [ isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,8 +33,10 @@ export const AppProvider = ({ children }) => {
     }, []);
 
     //This is a function for translating the language
-    const translate = async () => {
+    const translate = async (text) => {
         const params = new URLSearchParams();
+        setText(text)
+        // setTranslatedLanguage()
         params.append("q", text);
         params.append("source", defaultLanguage);
         params.append("target", translatedLanguage);
@@ -62,6 +66,7 @@ export const AppProvider = ({ children }) => {
                 setTranslatedLanguage,
                 translatedLanguage,
                 text,
+                setText,
                 translatedText,
                 setTranslatedText,
                 translate,

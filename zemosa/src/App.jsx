@@ -10,7 +10,6 @@ import Search from "./components/einbuergerungstest";
 import Settings from "./components/Settings";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
-//import { Test } from "./components/Test";
 
 import { Dictionary } from "./components/dictionary/Dictionary";
 //import { ResultList } from "./components/dictionary/ResultList";
