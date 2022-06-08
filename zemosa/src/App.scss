@@ -17,7 +17,6 @@ $header-padding: 5rem;
     display: flex;
     height: $viewport-homepage;
     background: $background-content;
-   
 }
 
 .footer {
@@ -66,8 +65,6 @@ $header-padding: 5rem;
 }
 .listIcon {
     padding: 0.4rem;
-    //      transform: translate(-50% +50%);
-    //  transition: transform 2s ease-in;
 }
 .ham-list {
     background-color: $background-form;
@@ -77,6 +74,11 @@ $header-padding: 5rem;
 }
 .ul-header a {
     text-decoration: none;
+}
+.footer-icon {
+    padding: $padding;
+    font-size: $font-size;
+    float: right;
 }
 //////////////////////////////////////
 //dic
@@ -90,9 +92,11 @@ $header-padding: 5rem;
     flex-direction: column;
     justify-content: center;
     background-color: $background-content;
-    margin: 8rem;
+
+    font-size: $font-size;
 
     #dic-input {
+        margin: 4rem;
         padding: 1rem;
         border-radius: 50px;
         border-bottom-left-radius: 0;
@@ -102,21 +106,9 @@ $header-padding: 5rem;
     #dic-button {
         padding: 1rem;
         border-radius: 50px;
-        // background-color: rgb(216, 183, 167);
     }
-    //  #dic-input:hover {
-    //     background-color: rgb(64, 104, 104);}
+}
 
-    // #dic-button:hover {
-    //     background-color: rgb(64, 104, 104);
-    //     color: rgb(255, 255, 255);
-    // }
-}
-.footer-icon{
-    padding:$padding;
-    font-size:$font-size;
-    float:right
-}
 // Omars Styling
 .slider {
     position: relative;
@@ -126,13 +118,13 @@ $header-padding: 5rem;
     align-items: center;
 
     .slideshow-images {
-        margin-top:9rem;
+        margin-top: 9rem;
         width: 1000px;
         height: 600px;
         border-radius: 10px;
         object-fit: cover;
     }
-   
+
     .slideshow-right-arrow {
         position: absolute;
         top: 50%;
