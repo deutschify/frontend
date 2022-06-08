@@ -1,0 +1,38 @@
+.searchBar{
+    margin-top:100px;
+    padding: 20px;
+    background-color: #DEEFFF;
+display: flex;
+        align-items: center;
+        flex-direction: column;
+    .title{
+        text-align:center
+    }
+
+    .searchInput{
+        width: 500px;
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 10px;
+        margin:20px;
+        border-radius: 50px;
+        border: none;
+        
+    }
+
+    .jsonData{
+        margin: 20px;
+        padding: 20px;
+        background-color: #F6C6EA;
+        border-radius: 50px;
+        text-align: center;
+        
+
+        .answer{
+            background-color: #CDF0EA;
+            text-align: left;
+            padding: 10px;
+            border-radius:50px;
+        }
+    }
+}
