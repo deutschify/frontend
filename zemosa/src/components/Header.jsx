@@ -1,13 +1,14 @@
 import "../App.scss";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { HamburgerIcon } from "react-hamburger-icon";
-import { FiLogIn } from "react-icons/fi";
+import { FiLogIn, FiPower } from "react-icons/fi";
 import { NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import Homepage from "./Homepage";
 import Levels from "./Levels";
 import { Dictionary } from "./dictionary/Dictionary";
-
+import { AppContext } from "../context/AppContext";
 import AskForHelp from "./AskForHelp";
+import {LogOut} from './LogOut';
 import { Books } from "./Books";
 import Search from "./einbuergerungstest";
 import Settings from "./Settings";
@@ -17,6 +18,8 @@ const Header = () => {
     const [open, setOpen] = useState(false);
     //state for the search baseURL
     const [search, setSearch] = useState("");
+
+    const { isLoggedIn, setIsLoggedIn } = useContext(AppContext);
 
     const headerStyles = {
         color: "red",
@@ -78,9 +81,15 @@ const Header = () => {
 
             {/* <GrLogin style={logInStyles} onClick={logInHandler} /> */}
 
-            <div className="sign-in" style={logInStyles} onClick={logInHandler}>
-                <span>Log In</span>
-                <FiLogIn />
+            <div className="sign-in" style={logInStyles}>
+                {isLoggedIn ? (
+                    <LogOut logOut={setIsLoggedIn}/>
+                ) : (
+                    <div class="login" onClick={logInHandler}>
+                        <span>Log In</span>
+                        <FiLogIn />
+                    </div>
+                )}
             </div>
 
             <HamburgerIcon
