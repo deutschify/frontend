@@ -21,7 +21,7 @@ export const Login = () => {
 
     const [users, setUsers] = useState([]);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         userRef.current.focus();
@@ -56,15 +56,14 @@ export const Login = () => {
         <>
             <div className="form-container">
                 <div className="login">
-                    <h3>Sign In</h3>
-                </div>
-                <div className="login">
                     <p ref={errRef} className={errMsg ? "errMsg" : "offscreen"}>
                         {errMsg}
                     </p>
                     <form onSubmit={handleSubmit}>
-                        <div>
+                        <div className="form-group">
+                            <h3>Sign In</h3>
                             <input
+                                className="login-input"
                                 onChange={(e) => setUser(e.target.value)}
                                 type="text"
                                 name="firstName"
@@ -76,8 +75,9 @@ export const Login = () => {
                             />
                         </div>
 
-                        <div>
+                        <div className="form-group">
                             <input
+                                className="login-input"
                                 onChange={(e) => setPwd(e.target.value)}
                                 type="password"
                                 name="password"
@@ -87,23 +87,30 @@ export const Login = () => {
                                 required
                             />
                         </div>
-
-                        <input type="submit" value="Sign In" />
+                        <div className="form-group">
+                            <input
+                                className="login-input"
+                                type="submit"
+                                value="Sign In"
+                            />
+                        </div>
                     </form>
-                    <span>
-                        Need an Account? <br />
-                        <span className="line">
+                    <div className="form-group">
+                        <span>
+                            Need an Account? <br />
                             <span className="line">
-                                <NavLink to="/register">Sign Up</NavLink>
+                                <span className="line">
+                                    <NavLink to="/register">Sign Up</NavLink>
+                                </span>
+                                <Routes>
+                                    <Route
+                                        path="/register"
+                                        element={<Register />}
+                                    />
+                                </Routes>
                             </span>
-                            <Routes>
-                                <Route
-                                    path="/register"
-                                    element={<Register />}
-                                />
-                            </Routes>
                         </span>
-                    </span>
+                    </div>
                 </div>
             </div>
         </>

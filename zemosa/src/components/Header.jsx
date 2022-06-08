@@ -1,3 +1,4 @@
+import "../App.scss";
 import React, { useState } from "react";
 import { HamburgerIcon } from "react-hamburger-icon";
 import { FiLogIn } from "react-icons/fi";
@@ -18,27 +19,33 @@ const Header = () => {
     const [search, setSearch] = useState("");
 
     const headerStyles = {
-        backgroundColor: "#ddd",
         color: "red",
         fontSize: "1.6rem",
         textAlign: "center",
-        position: "relative",
+        position: "fixed",
     };
     const burgerStyles = {
         position: "absolute",
         top: "0.5%",
         left: "0.5%",
+        margin: " 1rem  2rem ",
+        position: "fixed",
+        zIndex: "1",
     };
     const logInStyles = {
         position: "absolute",
         top: "0.5%",
         right: "0.5%",
-        cursor: "pointer"
+        cursor: "pointer",
+        margin: " 1rem  2rem ",
+        position: "fixed",
+        zIndex: "1",
     };
     const searchBarStyles = {
         position: "absolute",
         top: "-0.3rem",
         left: "48rem",
+        margin: " 2rem  2rem ",
     };
 
     // to make the fucking logIn Icon clickable, we need to use the navigate
@@ -61,7 +68,7 @@ const Header = () => {
                 >
                     <input
                         type="text"
-                        id="search"
+                        id="search-header"
                         placeholder="Search..."
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
@@ -89,10 +96,12 @@ const Header = () => {
                         width: "300px",
                         backgroundColor: "#ddd",
                         marginLeft: "5px",
-                        position: "absolute"
+                        position: "absolute",
+                        zIndex: "1",
+                        margin: " 3rem  2rem ",
                     }}
                 >
-                    <ul onClick={() => setOpen(false)}>
+                    <ul className="ul-header" onClick={() => setOpen(false)}>
                         <>
                             <li style={{ marginBottom: "10px" }}>
                                 <NavLink to="/home" element={<Homepage />}>
@@ -105,12 +114,18 @@ const Header = () => {
                                 </NavLink>
                             </li>{" "}
                             <li>
-                                <NavLink to="/dictionary" element={<Dictionary />}>
+                                <NavLink
+                                    to="/dictionary"
+                                    element={<Dictionary />}
+                                >
                                     Dictionary
                                 </NavLink>
                             </li>{" "}
                             <li>
-                                <NavLink to="/askforhelp" element={<AskForHelp />}>
+                                <NavLink
+                                    to="/askforhelp"
+                                    element={<AskForHelp />}
+                                >
                                     Ask for help
                                 </NavLink>
                             </li>{" "}

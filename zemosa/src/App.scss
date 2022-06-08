@@ -1,2 +1,55 @@
+$background: rgba(52, 149, 191, 0.781);
+$background-form: rgba(241, 222, 127, 0.739);
+$background-content: rgba(70, 154, 190, 0.781);
+$padding: 1rem;
+$font-size: 1rem;
+$viewport-homepage: 100vh;
+$footer-padding: 3rem 0;
+$header-padding: 2rem 0;
 
+.homepage {
+    padding: 2rem;
+    display: flex;
+    height: $viewport-homepage;
+    background: $background-content;
+}
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1;
+    background-color: $background;
+}
+.header {
+    background-color: $background;
+    padding: $header-padding;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+#search-header {
+    padding: 1rem;
+}
+.dictionary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem;
+}
+.social-media-icons {
+    padding: 3rem;
+}
+.form-container {
+    margin: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    padding: 0.5rem;
+}
+.login-input {
+    padding: $padding;
+    background: $background-form;
+}

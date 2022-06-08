@@ -1,6 +1,7 @@
+import "../App.scss";
 const Homepage = () => {
     return (
-        <>
+        <div className="homepage">
             <h2>HomePage</h2>
             <img
                 src="../../public/images/homepage-img.png"
@@ -15,7 +16,7 @@ const Homepage = () => {
                 <Route path="/register" element={<Register />} />
                 <Route path="/login/*" element={<Login />} />
             </Routes> */}
-        </>
+        </div>
     );
 };
 

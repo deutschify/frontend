@@ -46,13 +46,13 @@ export const Register = () => {
 
     return (
         <div className="form-container">
-            <div className="login">
-                <h3>Sign Up</h3>
-            </div>
+            <div className="login"></div>
             <div className="login">
                 <form onSubmit={handleSubmit(submitForm)}>
-                    <div>
+                    <div className="form-group">
+                        <h3>Sign Up</h3>
                         <input
+                            className="login-input"
                             type="text"
                             name="firstName"
                             autoComplete="on"
@@ -63,8 +63,9 @@ export const Register = () => {
                             <p>{errors.firstName?.message}</p>
                         </div>
                     </div>
-                    <div>
+                    <div className="form-group">
                         <input
+                            className="login-input"
                             type="text"
                             name="lastName"
                             autoComplete="on"
@@ -75,8 +76,9 @@ export const Register = () => {
                             <p>{errors.lastName?.message}</p>
                         </div>
                     </div>
-                    <div>
+                    <div className="form-group">
                         <input
+                            className="login-input"
                             type="email"
                             name="email"
                             autoComplete="on"
@@ -87,8 +89,9 @@ export const Register = () => {
                             <p>{errors.email?.message}</p>
                         </div>
                     </div>
-                    <div>
+                    <div className="form-group">
                         <input
+                            className="login-input"
                             type="password"
                             name="password"
                             autoComplete="on"
@@ -99,8 +102,9 @@ export const Register = () => {
                             <p>{errors.password?.message}</p>
                         </div>
                     </div>
-                    <div>
+                    <div className="form-group">
                         <input
+                            className="login-input"
                             type="password"
                             name="confirmPassword"
                             autoComplete="on"
@@ -114,17 +118,25 @@ export const Register = () => {
                             </p>
                         </div>
                     </div>
-                    <input type="submit" value="Sign Up" />
+                    <div className="form-group">
+                        <input
+                            className="login-input"
+                            type="submit"
+                            value="Sign Up"
+                        />
+                    </div>
                 </form>
-                <span>
-                    Already have an Account? <br />
-                    <span className="line">
-                        <NavLink to="/login">Sign In</NavLink>
+                <div className="form-group">
+                    <span>
+                        Already have an Account? <br />
+                        <span className="line">
+                            <NavLink to="/login">Sign In</NavLink>
+                        </span>
+                        <Routes>
+                            <Route path="/login" element={<Login />} />
+                        </Routes>
                     </span>
-                    <Routes>
-                        <Route path="/login" element={<Login />} />
-                    </Routes>
-                </span>
+                </div>
             </div>
         </div>
     );
