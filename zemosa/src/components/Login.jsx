@@ -6,7 +6,7 @@ import { Test } from "./Test";
 import { Register } from "./Register";
 import Homepage from "./Homepage";
 
-const usersUrl = "http://localhost:5000/users";
+const usersUrl = "http://localhost:5050/users";
 
 export const Login = () => {
     // Import from AppContext the success state variable in order to show if someone is logged in
