@@ -44,7 +44,7 @@ export const Einbuergerungstest = () => {
                                 {testQuestion.number}: {""} 
                                 <FiInfo style={{marginLeft:"10px"}} onClick={() => translate([testQuestion.question, testQuestion.correctAnswer]) } />
                                 <br /><br />
-                                {testQuestion.question} : 
+                                {testQuestion.question}  
                                 <span style={{marginLeft:"10px", color:"brown"}}>{testQuestion.question === text.substring( 0, text.indexOf(">")) && translatedText[0]}</span>
                                 <div className="answer">
                                 {testQuestion.correctAnswer}
