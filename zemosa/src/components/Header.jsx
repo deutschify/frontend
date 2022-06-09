@@ -10,13 +10,13 @@ import { AppContext } from "../context/AppContext";
 import AskForHelp from "./AskForHelp";
 import {LogOut} from './LogOut';
 import { Books } from "./Books";
-import Search from "./einbuergerungstest";
+import {Einbuergerungstest} from "./Einbuergerungstest";
 import Settings from "./Settings";
 
 const Header = () => {
     //state for the hamburger icon
     const [open, setOpen] = useState(false);
-    //state for the search baseURL
+    //state for the Einbürgerungstest baseURL
     const [search, setSearch] = useState("");
 
     const { isLoggedIn, setIsLoggedIn } = useContext(AppContext);
@@ -154,7 +154,7 @@ const Header = () => {
                                 <li>
                                     <NavLink
                                         to="/einbuergerungstest"
-                                        element={<Search />}
+                                        element={<Einbuergerungstest />}
                                     >
                                         Einbürgerungstest
                                     </NavLink>

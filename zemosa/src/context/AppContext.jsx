@@ -14,7 +14,7 @@ export const AppProvider = ({ children }) => {
     const [defaultLanguage, setDefaultLanguage] = useState("de");
     const [translatedLanguage, setTranslatedLanguage] = useState([]);
     const [text, setText] = useState("");
-    const [translatedText, setTranslatedText] = useState("");
+    const [translatedText, setTranslatedText] = useState([]);
 
     // These are for dictionary state variables that
     const [inputValue, setInputValue] = useState("");
@@ -33,8 +33,9 @@ export const AppProvider = ({ children }) => {
     }, []);
 
     //This is a function for translating the language
-    const translate = async (text) => {
+    const translate = async (textArr) => {
         const params = new URLSearchParams();
+        const text = textArr.join('>');
         setText(text)
         // setTranslatedLanguage()
         params.append("q", text);
@@ -52,7 +53,7 @@ export const AppProvider = ({ children }) => {
                         "Content-Type": "application/x-www-form-urlencoded",
                     },
                 })
-            ).data.translatedText
+            ).data.translatedText.split(">")
         );
     };
 

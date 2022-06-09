@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Levels from "./components/Levels";
 import AskForHelp from "./components/AskForHelp";
 import Books from "./components/Books";
-import Search from "./components/einbuergerungstest";
+import {Einbuergerungstest} from "./components/Einbuergerungstest";
 import Settings from "./components/Settings";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
@@ -27,7 +27,7 @@ function App() {
                 <Route path="/dictionary" element={<Dictionary />} />
                 <Route path="/askforhelp" element={<AskForHelp />} />
                 <Route path="/books" element={<Books />} />
-                <Route path="/einbuergerungstest/*" element={<Search />} />
+                <Route path="/einbuergerungstest/*" element={<Einbuergerungstest />} />
                 <Route path="/settings" element={<Settings />} />
 
                 {/* <Route path="*" element={<Register />} /> */}

@@ -1,38 +1,37 @@
-.searchBar{
-    margin-top:100px;
+.searchBar {
+    margin-top: 100px;
     padding: 20px;
-    background-color: #DEEFFF;
-display: flex;
-        align-items: center;
-        flex-direction: column;
-    .title{
-        text-align:center
+    background-color: #deefff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .title {
+        text-align: center;
     }
 
-    .searchInput{
+    .searchInput {
         width: 500px;
         text-align: center;
         font-size: 1.2rem;
         padding: 10px;
-        margin:20px;
+        margin: 20px;
         border-radius: 50px;
         border: none;
-        
     }
 
-    .jsonData{
+    .jsonData {
         margin: 20px;
         padding: 20px;
-        background-color: #F6C6EA;
+        background-color: #f6c6ea;
         border-radius: 50px;
         text-align: center;
-        
 
-        .answer{
-            background-color: #CDF0EA;
-            text-align: left;
+        .answer {
+            background-color: #cdf0ea;
+            text-align: center;
             padding: 10px;
-            border-radius:50px;
+            margin-top: 15px;
+            border-radius: 50px;
         }
     }
 }
