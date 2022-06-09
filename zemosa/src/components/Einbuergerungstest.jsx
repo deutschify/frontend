@@ -1,7 +1,7 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import { useState, useContext } from "react";
 import { AppContext } from "../context/AppContext";
-import { FiInfo } from "react-icons/fi";
+import { BsTranslate } from "react-icons/bs";
 
 import './Einbuergerungstest.scss';
 import { Login } from "./Login";
@@ -42,7 +42,7 @@ export const Einbuergerungstest = () => {
                         return (
                             <div className="jsonData" key={testQuestion.number}>
                                 {testQuestion.number}: {""} 
-                                <FiInfo style={{marginLeft:"10px"}} onClick={() => translate([testQuestion.question, testQuestion.correctAnswer]) } />
+                                <BsTranslate style={{marginLeft:"10px"}} onClick={() => translate([testQuestion.question, testQuestion.correctAnswer]) } />
                                 <br /><br />
                                 {testQuestion.question}  
                                 <span style={{marginLeft:"10px", color:"brown"}}>{testQuestion.question === text.substring( 0, text.indexOf(">")) && translatedText[0]}</span>
