@@ -8,9 +8,9 @@ import Levels from "./Levels";
 import { Dictionary } from "./dictionary/Dictionary";
 import { AppContext } from "../context/AppContext";
 import AskForHelp from "./AskForHelp";
-import {LogOut} from './LogOut';
+import { LogOut } from "./LogOut";
 import { Books } from "./Books";
-import {Einbuergerungstest} from "./Einbuergerungstest";
+import { Einbuergerungstest } from "./Einbuergerungstest";
 import Settings from "./Settings";
 
 const Header = () => {
@@ -22,11 +22,10 @@ const Header = () => {
     const { isLoggedIn, setIsLoggedIn } = useContext(AppContext);
 
     const headerStyles = {
-       
         fontSize: "1.6rem",
         textAlign: "center",
         position: "fixed",
-        padding: "2.2rem"
+        padding: "2.2rem",
     };
     const burgerStyles = {
         position: "absolute",
@@ -35,7 +34,6 @@ const Header = () => {
         margin: " 2rem  2rem ",
         position: "fixed",
         zIndex: "1",
-        
     };
     const logInStyles = {
         position: "absolute",
@@ -85,11 +83,11 @@ const Header = () => {
 
             <div className="sign-in" style={logInStyles}>
                 {isLoggedIn ? (
-                    <LogOut logOut={setIsLoggedIn}/>
+                    <LogOut logOut={setIsLoggedIn} />
                 ) : (
                     <div className="login" onClick={logInHandler}>
-                        <span>Log In</span>
-                        <FiLogIn />
+                        {/* <span>Log In</span> */}
+                        <FiLogIn title="Login" />
                     </div>
                 )}
             </div>
@@ -100,77 +98,70 @@ const Header = () => {
                 open={open}
                 onClick={() => setOpen(!open)}
             />
-            {open &&
-                (
-                    <div
-                        className="ham-list"
-                        style={{
-                            height: "600px",
-                            width: "300px",
+            {open && (
+                <div
+                    className="ham-list"
+                    style={{
+                        height: "600px",
+                        width: "300px",
 
-                            marginLeft: "5px",
-                            position: "absolute",
-                            zIndex: "1",
-                            margin: " 3rem  2rem ",
-                            borderRadius: "10%",
-                        }}
-                    >
-                        <ul
-                            className="ul-header"
-                            onClick={() => setOpen(false)}
-                        >
-                            <>
-                                <li style={{ marginBottom: "10px" }}>
-                                    <NavLink to="/home" element={<Homepage />}>
-                                        Homepage
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink to="/levels" element={<Levels />}>
-                                        Language Levels
-                                    </NavLink>
-                                </li>{" "}
-                                <li>
-                                    <NavLink
-                                        to="/dictionary"
-                                        element={<Dictionary />}
-                                    >
-                                        Dictionary
-                                    </NavLink>
-                                </li>{" "}
-                                <li>
-                                    <NavLink
-                                        to="/askforhelp"
-                                        element={<AskForHelp />}
-                                    >
-                                        Ask for help
-                                    </NavLink>
-                                </li>{" "}
-                                <li>
-                                    <NavLink to="/books" element={<Books />}>
-                                        Books
-                                    </NavLink>
-                                </li>{" "}
-                                <li>
-                                    <NavLink
-                                        to="/einbuergerungstest"
-                                        element={<Einbuergerungstest />}
-                                    >
-                                        Einbürgerungstest
-                                    </NavLink>
-                                </li>
-                                <li>
-                                    <NavLink
-                                        to="/settings"
-                                        element={<Settings />}
-                                    >
-                                        Settings
-                                    </NavLink>
-                                </li>
-                            </>
-                        </ul>
-                    </div>
-                )}
+                        marginLeft: "5px",
+                        position: "absolute",
+                        zIndex: "1",
+                        margin: " 3rem  2rem ",
+                        borderRadius: "10%",
+                    }}
+                >
+                    <ul className="ul-header" onClick={() => setOpen(false)}>
+                        <>
+                            <li style={{ marginBottom: "10px" }}>
+                                <NavLink to="/home" element={<Homepage />}>
+                                    Homepage
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/levels" element={<Levels />}>
+                                    Language Levels
+                                </NavLink>
+                            </li>{" "}
+                            <li>
+                                <NavLink
+                                    to="/dictionary"
+                                    element={<Dictionary />}
+                                >
+                                    Dictionary
+                                </NavLink>
+                            </li>{" "}
+                            <li>
+                                <NavLink
+                                    to="/askforhelp"
+                                    element={<AskForHelp />}
+                                >
+                                    Ask for help
+                                </NavLink>
+                            </li>{" "}
+                            <li>
+                                <NavLink to="/books" element={<Books />}>
+                                    Books
+                                </NavLink>
+                            </li>{" "}
+                            <li>
+                                <NavLink
+                                    to="/einbuergerungstest"
+                                    element={<Einbuergerungstest />}
+                                >
+                                    Einbürgerungstest
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/settings" element={<Settings />}>
+                                    Settings
+                                </NavLink>
+                            </li>
+                        </>
+                    </ul>
+                </div>
+            )}
         </>
     );
 };
