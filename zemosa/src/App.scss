@@ -1,2 +1,160 @@
+$background: #bcdef9;
+$background-form: #a4c4f3;
+$background-content: #deefff;
+$padding: 1rem;
+$font-size: 1.6rem;
+$viewport-homepage: 100vh;
+$footer-padding: 3rem 0;
+$header-padding: 5rem;
+.App {
+    background-image: url("../../zemosa/public/images/zemosahp.png");
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.homepage {
+    padding: 2rem;
+    display: flex;
+    height: $viewport-homepage;
+    background: $background-content;
+}
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1;
+    background-color: $background;
+}
+.header {
+    background-color: $background;
+    padding: $header-padding;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 5vh;
+    z-index: 1;
+}
+#search-header {
+    padding: 1rem;
+}
+.dictionary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem;
+}
+.social-media-icons {
+    padding: 3rem;
+}
+.form-container {
+    margin: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-group {
+    padding: 0.5rem;
+}
+.login-input {
+    padding: $padding;
+    width: 20rem;
+    border-radius: 50px;
+}
+.sign-in {
+    font-size: $font-size;
+}
+.listIcon {
+    padding: 0.4rem;
+}
+.ham-list {
+    background-color: $background-form;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    background-attachment: $background-content;
+}
+.ul-header a {
+    text-decoration: none;
+}
+.footer-icon {
+    padding: $padding;
+    font-size: $font-size;
+    float: right;
+}
+//////////////////////////////////////
+//dic
 
+.dictionary,
+.example-list,
+.meaning-list,
+.meaning-definitions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $background-content;
+
+    font-size: $font-size;
+
+    #dic-input {
+        margin: 4rem;
+        padding: 1rem;
+        border-radius: 50px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-color: rgb(64, 104, 104);
+    }
+    #dic-button {
+        padding: 1rem;
+        border-radius: 50px;
+    }
+}
+
+// Omars Styling
+.slider {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .slideshow-images {
+        margin-top: 8rem;
+        width: 1000px;
+        height: 600px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    .slideshow-title {
+        text-align: center;
+    }
+
+    .slideshow-right-arrow {
+        position: absolute;
+        top: 50%;
+        right: 32px;
+        font-size: 3rem;
+        color: black;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+    }
+    .slideshow-left-arrow {
+        position: absolute;
+        top: 50%;
+        left: 32px;
+        font-size: 3rem;
+        color: black;
+        z-index: 10;
+        cursor: pointer;
+        user-select: none;
+    }
+    .slide {
+        opacity: 0;
+        transition-duration: 1s ease;
+    }
+    .slide.active {
+        opacity: 1;
+        transition-duration: 1s;
+        transform: scale(1.08);
+    }
+}
