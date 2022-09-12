@@ -1,11 +1,6 @@
 import { useState, useContext } from "react";
 import { AppContext } from "../../context/AppContext";
-import { ResultList } from "./ResultList";
-// import { Example } from "./Example";
-// import { MeaningList } from "./MeaningList";
-// import { Synonym } from "./Synonym";
-// import { Antonym } from "./Antonym";
-import "../../../src/App.scss";
+
 export const Dictionary = () => {
     const [value, setValue] = useState("");
     const { inputValue, setInputValue } = useContext(AppContext);
@@ -23,14 +18,17 @@ export const Dictionary = () => {
     return (
         <div className="dictionary">
             <div className="dicteonary-input">
+
                 <input
                     id="dic-input"
+
                     type="text"
                     placeholder="Search"
                     onChange={handleInputChange}
                     value={value}
                     onKeyDown={handleInputKeyDown}
                 />
+
                 <button id="dic-button" onClick={handleSubmit}>
                     Search
                 </button>
@@ -42,6 +40,7 @@ export const Dictionary = () => {
                     </h3>
                     <ResultList />
                 </>
+
             )}
         </div>
     );
